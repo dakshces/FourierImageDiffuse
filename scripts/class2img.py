@@ -152,3 +152,5 @@ if __name__ == "__main__":
     Image.fromarray(grid.astype(np.uint8)).save(os.path.join(outpath, f'class2img.png'))
 
     print(f"Your samples are ready and waiting four you here: \n{outpath} \nEnjoy.")
+
+# python scripts/class2img.py  --ddim_eta 0.0 --n_samples 6  --scale 3.0  --ddim_steps 20
