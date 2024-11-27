@@ -1,6 +1,6 @@
 **/__pycache__/
 
-models
-data
+/models/
+/data/
 outputs
 logs
