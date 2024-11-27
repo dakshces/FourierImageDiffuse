@@ -115,7 +115,8 @@ if __name__ == "__main__":
 
     #classes = [25, 187, 448, 992]   # define classes to be sampled here
     #classes = [50, 900, 200, 400]
-    classes = [100, 300, 500, 800]
+    #classes = [100, 300, 500, 800]
+    classes = [446, 127, 56, 12]
     with torch.no_grad():
         with model.ema_scope():
             
