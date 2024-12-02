@@ -167,7 +167,9 @@ class LatentDiffusionFrequency(DDPM):
             z = encoder_posterior
         else:
             raise NotImplementedError(f"encoder_posterior of type '{type(encoder_posterior)}' not yet implemented")
-        return self.scale_factor * z
+        
+        z = self.scale_factor * z
+        return self.dft(z)
 
     def get_learned_conditioning(self, c):
         if self.cond_stage_forward is None:
@@ -298,7 +300,7 @@ class LatentDiffusionFrequency(DDPM):
         z = self.get_first_stage_encoding(encoder_posterior).detach()
         
         # apply dft and split real and imaginary parts for separate diffusion
-        z = self.dft(z)
+        #z = self.dft(z)
 
 
         if self.model.conditioning_key is not None:
@@ -344,18 +346,20 @@ class LatentDiffusionFrequency(DDPM):
         return out
 
     @torch.no_grad()
-    def invert_dft(z):
+    def invert_dft(self, z):
         length = z.shape[-1]
+        print(length)
         # Split the real and imaginary parts
         real_part = z[..., :length // 2 + 1]  # Extract real part
+        print(real_part.shape)
         imag_part = z[..., length // 2 + 1:]  # Extract trimmed imaginary part
+        print(imag_part.shape)
 
+        full_imag_part = torch.cat([torch.zeros_like(imag_part[..., :1]), imag_part], dim=-1)
         # Rebuild the full imaginary part by adding zeros where needed
         if length % 2 == 0:
             # For even-length signals, we add an extra zero at the end of the imaginary part
-            full_imag_part = torch.cat([imag_part, torch.zeros_like(imag_part[..., :1])], dim=-1)
-        else:
-            full_imag_part = torch.cat([imag_part, torch.zeros_like(imag_part[..., :1])], dim=-1)
+            full_imag_part = torch.cat([full_imag_part, torch.zeros_like(imag_part[..., :1])], dim=-1)
 
         # Reconstruct the complex tensor
         complex_tensor = torch.complex(real_part, full_imag_part)
@@ -368,7 +372,7 @@ class LatentDiffusionFrequency(DDPM):
     @torch.no_grad()
     def decode_first_stage(self, z, predict_cids=False, force_not_quantize=False):
 
-        z = invert_dft(z)  ## invert dft and reconstuct image in latent
+        z = self.invert_dft(z)  ## invert dft and reconstuct image in latent
 
         if predict_cids:
             if z.dim() == 4:
@@ -430,7 +434,7 @@ class LatentDiffusionFrequency(DDPM):
 
     # same as above but without decorator
     def differentiable_decode_first_stage(self, z, predict_cids=False, force_not_quantize=False):
-        z = invert_dft(z)
+        z = self.invert_dft(z)
         if predict_cids:
             if z.dim() == 4:
                 z = torch.argmax(z.exp(), dim=1).long()

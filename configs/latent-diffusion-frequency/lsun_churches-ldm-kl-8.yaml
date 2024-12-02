@@ -73,7 +73,7 @@ data:
       target: ldm.data.lsun.LSUNChurchesTrain
       params:
         size: 256
-        skip_probability: 0.5
+        skip_probability: 0.0
     validation:
       target: ldm.data.lsun.LSUNChurchesValidation
       params:
