@@ -457,8 +457,8 @@ class LatentDiffusion(DDPM):
             self.scale_factor = scale_factor
         else:
             self.register_buffer('scale_factor', torch.tensor(scale_factor))
-        self.instantiate_first_stage(first_stage_config)
-        self.instantiate_cond_stage(cond_stage_config)
+        self.instantiate_first_stage(first_stage_config) ## image encoder
+        self.instantiate_cond_stage(cond_stage_config)   ## 
         self.cond_stage_forward = cond_stage_forward
         self.clip_denoised = False
         self.bbox_tokenizer = None  
@@ -1027,7 +1027,9 @@ class LatentDiffusion(DDPM):
         loss_simple = self.get_loss(model_output, target, mean=False).mean([1, 2, 3])
         loss_dict.update({f'{prefix}/loss_simple': loss_simple.mean()})
 
-        logvar_t = self.logvar[t].to(self.device)
+        #logvar_t = self.logvar[t].to(self.device)
+        logvar_t = self.logvar[t.to(self.logvar.device)].to(self.device)
+        
         loss = loss_simple / torch.exp(logvar_t) + logvar_t
         # loss = loss_simple / torch.exp(self.logvar) + self.logvar
         if self.learn_logvar:

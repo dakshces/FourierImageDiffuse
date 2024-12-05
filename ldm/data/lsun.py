@@ -4,7 +4,7 @@ import PIL
 from PIL import Image
 from torch.utils.data import Dataset
 from torchvision import transforms
-
+import random
 
 class LSUNBase(Dataset):
     def __init__(self,
@@ -12,7 +12,8 @@ class LSUNBase(Dataset):
                  data_root,
                  size=None,
                  interpolation="bicubic",
-                 flip_p=0.5
+                 flip_p=0.5,
+                 skip_probability=0.0  # New parameter to control skip probability
                  ):
         self.data_paths = txt_file
         self.data_root = data_root
@@ -26,17 +27,23 @@ class LSUNBase(Dataset):
         }
 
         self.size = size
-        self.interpolation = {"linear": PIL.Image.LINEAR,
-                              "bilinear": PIL.Image.BILINEAR,
+        self.interpolation = {"bilinear": PIL.Image.BILINEAR,
                               "bicubic": PIL.Image.BICUBIC,
                               "lanczos": PIL.Image.LANCZOS,
                               }[interpolation]
         self.flip = transforms.RandomHorizontalFlip(p=flip_p)
+        self.skip_probability = skip_probability  # Store skip probability
 
     def __len__(self):
         return self._length
 
     def __getitem__(self, i):
+        # Skip logic: randomly skip a sample with probability self.skip_probability
+        while random.random() < self.skip_probability:
+            # If skipped, select another sample
+            i = (i + 1) % self._length  # Wrap around if we reach the end
+
+        # Retrieve the sample from the dataset
         example = dict((k, self.labels[k][i]) for k in self.labels)
         image = Image.open(example["file_path_"])
         if not image.mode == "RGB":
@@ -47,7 +54,7 @@ class LSUNBase(Dataset):
         crop = min(img.shape[0], img.shape[1])
         h, w, = img.shape[0], img.shape[1]
         img = img[(h - crop) // 2:(h + crop) // 2,
-              (w - crop) // 2:(w + crop) // 2]
+                  (w - crop) // 2:(w + crop) // 2]
 
         image = Image.fromarray(img)
         if self.size is not None:
@@ -62,6 +69,7 @@ class LSUNBase(Dataset):
 class LSUNChurchesTrain(LSUNBase):
     def __init__(self, **kwargs):
         super().__init__(txt_file="data/lsun/church_outdoor_train.txt", data_root="data/lsun/churches", **kwargs)
+
 
 
 class LSUNChurchesValidation(LSUNBase):
