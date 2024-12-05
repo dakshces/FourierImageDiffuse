@@ -1,5 +1,5 @@
 model:
-  base_learning_rate: 5.0e-5   # set to target_lr by starting main.py with '--scale_lr False'
+  base_learning_rate: 1.0e-4   # set to target_lr by starting main.py with '--scale_lr False' 5.0e-5
   target: ldm.models.diffusion.ddpm_frequency.LatentDiffusionFrequency
   params:
     linear_start: 0.0015

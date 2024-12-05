@@ -5,7 +5,7 @@ input_file = "data/lsun/church_outdoor_val_full.txt"
 output_file = "data/lsun/church_outdoor_val.txt" 
 #input_file = "data/lsun/church_outdoor_train_full.txt"  
 #output_file = "data/lsun/church_outdoor_train.txt" 
-size = 1000
+size = 2500
 # Load image file names from the input file
 with open(input_file, 'r') as f:
     file_names = f.read().splitlines()
