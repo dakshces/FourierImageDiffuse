@@ -347,25 +347,25 @@ class LatentDiffusionFrequency(DDPM):
 
     @torch.no_grad()
     def invert_dft(self, z):
-        length = z.shape[-1]
+        length = z.shape[1]
         print(length)
         # Split the real and imaginary parts
-        real_part = z[..., :length // 2 + 1]  # Extract real part
+        real_part = z[:, :length // 2 + 1, ...]  # Extract real part
         print(real_part.shape)
-        imag_part = z[..., length // 2 + 1:]  # Extract trimmed imaginary part
+        imag_part = z[:, length // 2 + 1:, ...]  # Extract trimmed imaginary part
         print(imag_part.shape)
 
-        full_imag_part = torch.cat([torch.zeros_like(imag_part[..., :1]), imag_part], dim=-1)
+        full_imag_part = torch.cat([torch.zeros_like(imag_part[:, :1, ...]), imag_part], dim=1)
         # Rebuild the full imaginary part by adding zeros where needed
         if length % 2 == 0:
             # For even-length signals, we add an extra zero at the end of the imaginary part
-            full_imag_part = torch.cat([full_imag_part, torch.zeros_like(imag_part[..., :1])], dim=-1)
+            full_imag_part = torch.cat([full_imag_part, torch.zeros_like(imag_part[:, :1, ...])], dim=1)
 
         # Reconstruct the complex tensor
         complex_tensor = torch.complex(real_part, full_imag_part)
 
         # Perform inverse rFFT to recover the original signal
-        z_recovered = torch.fft.irfft(complex_tensor, n=length)
+        z_recovered = torch.fft.irfft(complex_tensor, dim=1, n=length)
 
         return z_recovered
 
