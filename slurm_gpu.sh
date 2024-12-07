@@ -48,4 +48,4 @@ cd ${HOME_DIR}
 # sh ./run_exps_fourier_reg.sh gaussian
 # sh ./run_exps_fourier_reg.sh gmm
 #sh ./run_exps_fourier_reg.sh gmm2
-CUDA_VISIBLE_DEVICES=0 python main.py --base configs/latent-diffusion/lsun_churches-ldm-kl-8.yaml -t --gpus 0, --scale_lr False
+CUDA_VISIBLE_DEVICES=0 python main.py --base configs/latent-diffusion-frequency/lsun_conference-ldm-vq-4.yaml -t --gpus 0, --scale_lr False
