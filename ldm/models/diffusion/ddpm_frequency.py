@@ -286,7 +286,7 @@ class LatentDiffusionFrequency(DDPM):
         imag_part_trimmed = imag_part[:, 1:-1, ...] if x.shape[1] % 2 == 0 else imag_part[:, 1:, ...]
 
         # Concatenate the real parts and the trimmed imaginary parts
-        z = torch.cat((real_part, imag_part_trimmed), dim=2)
+        z = torch.cat((real_part, imag_part_trimmed), dim=1)
         return z
 
     @torch.no_grad()
