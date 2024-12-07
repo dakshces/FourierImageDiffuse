@@ -275,7 +275,7 @@ class LatentDiffusionFrequency(DDPM):
 
     @torch.no_grad()
     def dft(self, x):
-        rfft_result = torch.fft.rfft(x)  # Shape: (batch_size, signal_length // 2 + 1)
+        rfft_result = torch.fft.rfft(x, dim=1)  # Shape: (batch_size, signal_length // 2 + 1)
 
         # Extract the real and imaginary parts
         real_part = rfft_result.real  # Shape: (batch_size, signal_length // 2 + 1)
@@ -283,10 +283,10 @@ class LatentDiffusionFrequency(DDPM):
 
         # Remove the imaginary parts corresponding to real-only components
         # First component and possibly the last (when signal_length is even)
-        imag_part_trimmed = imag_part[..., 1:-1] if x.shape[1] % 2 == 0 else imag_part[..., 1:]
+        imag_part_trimmed = imag_part[:, 1:-1, ...] if x.shape[1] % 2 == 0 else imag_part[:, 1:, ...]
 
         # Concatenate the real parts and the trimmed imaginary parts
-        z = torch.cat((real_part, imag_part_trimmed), dim=-1)
+        z = torch.cat((real_part, imag_part_trimmed), dim=2)
         return z
 
     @torch.no_grad()
