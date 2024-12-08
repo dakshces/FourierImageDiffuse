@@ -1,5 +1,5 @@
 model:
-  base_learning_rate: 2.0e-06
+  base_learning_rate: 4.0e-06
   target: ldm.models.diffusion.ddpm.LatentDiffusion
   params:
     linear_start: 0.0015
@@ -63,11 +63,11 @@ data:
     num_workers: 5
     wrap: false
     train:
-      target: ldm.data.lsun.LSUNBedroomsTrain
+      target: ldm.data.lsun.LSUNBedroomTrain
       params:
         size: 256
     validation:
-      target: ldm.data.lsun.LSUNBedroomsValidation
+      target: ldm.data.lsun.LSUNBedroomValidation
       params:
         size: 256
 

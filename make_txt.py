@@ -2,13 +2,13 @@ import os
 import random
 
 # Define your directory path and output files
-directory = "data/lsun/classroom"  
-train_output_file = "data/lsun/classroom_train.txt"
-val_output_file = "data/lsun/classroom_val.txt"
+directory = "data/lsun/bedroom"  
+train_output_file = "data/lsun/bedroom_train.txt"
+val_output_file = "data/lsun/bedroom_val.txt"
 
 # Define the number of files for training and validation
-train_count = 50000
-val_count = 5000
+train_count = 45000
+val_count = 4500
 
 # Get a list of all .webp files in the directory
 all_files = [f for f in os.listdir(directory) if f.endswith('.webp')]
