@@ -3496,3 +3496,577 @@ Epoch 63, global step 30015: val/loss_simple_ema was not in top 3
 Average Epoch time: 1118.46 seconds
 Average Peak memory 28767.97MiB
 Epoch 64, global step 30484: val/loss_simple_ema reached 0.24475 (best 0.24475), saving model to "logs/2024-12-07T19-20-50_lsun_bedroom-ldm-kl-8/checkpoints/epoch=000064.ckpt" as top 3
+Average Epoch time: 1122.62 seconds
+Average Peak memory 28763.32MiB
+Epoch 65, global step 30953: val/loss_simple_ema reached 0.24456 (best 0.24456), saving model to "logs/2024-12-07T19-20-50_lsun_bedroom-ldm-kl-8/checkpoints/epoch=000065.ckpt" as top 3
+Average Epoch time: 1122.45 seconds
+Average Peak memory 28767.97MiB
+Epoch 66, global step 31422: val/loss_simple_ema was not in top 3
+Average Epoch time: 1122.73 seconds
+Average Peak memory 28765.57MiB
+Epoch 67, global step 31891: val/loss_simple_ema was not in top 3
+Average Epoch time: 1122.76 seconds
+Average Peak memory 28769.09MiB
+Epoch 68, global step 32360: val/loss_simple_ema was not in top 3
+Average Epoch time: 1121.46 seconds
+Average Peak memory 28765.57MiB
+Epoch 69, global step 32829: val/loss_simple_ema was not in top 3
+Average Epoch time: 1121.92 seconds
+Average Peak memory 28769.09MiB
+Epoch 70, global step 33298: val/loss_simple_ema was not in top 3
+Average Epoch time: 1121.70 seconds
+Average Peak memory 28765.57MiB
+Epoch 71, global step 33767: val/loss_simple_ema was not in top 3
+Average Epoch time: 1122.25 seconds
+Average Peak memory 28769.09MiB
+Epoch 72, global step 34236: val/loss_simple_ema was not in top 3
+Average Epoch time: 1121.35 seconds
+Average Peak memory 28765.57MiB
+Epoch 73, global step 34705: val/loss_simple_ema reached 0.24486 (best 0.24456), saving model to "logs/2024-12-07T19-20-50_lsun_bedroom-ldm-kl-8/checkpoints/epoch=000073.ckpt" as top 3
+
+DDIM Sampler:   0%|          | 0/200 [00:00<?, ?it/s][A
+DDIM Sampler:   2%|▏         | 3/200 [00:00<00:07, 26.37it/s][A
+DDIM Sampler:   3%|▎         | 6/200 [00:00<00:07, 26.54it/s][A
+DDIM Sampler:   4%|▍         | 9/200 [00:00<00:07, 26.57it/s][A
+DDIM Sampler:   6%|▌         | 12/200 [00:00<00:07, 26.61it/s][A
+DDIM Sampler:   8%|▊         | 15/200 [00:00<00:06, 26.61it/s][A
+DDIM Sampler:   9%|▉         | 18/200 [00:00<00:06, 26.62it/s][A
+DDIM Sampler:  10%|█         | 21/200 [00:00<00:06, 26.66it/s][A
+DDIM Sampler:  12%|█▏        | 24/200 [00:00<00:06, 26.64it/s][A
+DDIM Sampler:  14%|█▎        | 27/200 [00:01<00:06, 26.64it/s][A
+DDIM Sampler:  15%|█▌        | 30/200 [00:01<00:06, 26.65it/s][A
+DDIM Sampler:  16%|█▋        | 33/200 [00:01<00:06, 26.64it/s][A
+DDIM Sampler:  18%|█▊        | 36/200 [00:01<00:06, 26.66it/s][A
+DDIM Sampler:  20%|█▉        | 39/200 [00:01<00:06, 26.66it/s][A
+DDIM Sampler:  21%|██        | 42/200 [00:01<00:05, 26.67it/s][A
+DDIM Sampler:  22%|██▎       | 45/200 [00:01<00:05, 26.67it/s][A
+DDIM Sampler:  24%|██▍       | 48/200 [00:01<00:05, 26.65it/s][A
+DDIM Sampler:  26%|██▌       | 51/200 [00:01<00:05, 26.63it/s][A
+DDIM Sampler:  27%|██▋       | 54/200 [00:02<00:05, 26.66it/s][A
+DDIM Sampler:  28%|██▊       | 57/200 [00:02<00:05, 26.65it/s][A
+DDIM Sampler:  30%|███       | 60/200 [00:02<00:05, 26.67it/s][A
+DDIM Sampler:  32%|███▏      | 63/200 [00:02<00:05, 26.66it/s][A
+DDIM Sampler:  33%|███▎      | 66/200 [00:02<00:05, 26.66it/s][A
+DDIM Sampler:  34%|███▍      | 69/200 [00:02<00:04, 26.68it/s][A
+DDIM Sampler:  36%|███▌      | 72/200 [00:02<00:04, 26.66it/s][A
+DDIM Sampler:  38%|███▊      | 75/200 [00:02<00:04, 26.67it/s][A
+DDIM Sampler:  39%|███▉      | 78/200 [00:02<00:04, 26.70it/s][A
+DDIM Sampler:  40%|████      | 81/200 [00:03<00:04, 26.67it/s][A
+DDIM Sampler:  42%|████▏     | 84/200 [00:03<00:04, 26.67it/s][A
+DDIM Sampler:  44%|████▎     | 87/200 [00:03<00:04, 26.69it/s][A
+DDIM Sampler:  45%|████▌     | 90/200 [00:03<00:04, 26.65it/s][A
+DDIM Sampler:  46%|████▋     | 93/200 [00:03<00:04, 26.65it/s][A
+DDIM Sampler:  48%|████▊     | 96/200 [00:03<00:03, 26.63it/s][A
+DDIM Sampler:  50%|████▉     | 99/200 [00:03<00:03, 26.62it/s][A
+DDIM Sampler:  51%|█████     | 102/200 [00:03<00:03, 26.64it/s][A
+DDIM Sampler:  52%|█████▎    | 105/200 [00:03<00:03, 26.64it/s][A
+DDIM Sampler:  54%|█████▍    | 108/200 [00:04<00:03, 26.64it/s][A
+DDIM Sampler:  56%|█████▌    | 111/200 [00:04<00:03, 26.65it/s][A
+DDIM Sampler:  57%|█████▋    | 114/200 [00:04<00:03, 26.64it/s][A
+DDIM Sampler:  58%|█████▊    | 117/200 [00:04<00:03, 26.66it/s][A
+DDIM Sampler:  60%|██████    | 120/200 [00:04<00:03, 26.66it/s][A
+DDIM Sampler:  62%|██████▏   | 123/200 [00:04<00:02, 26.65it/s][A
+DDIM Sampler:  63%|██████▎   | 126/200 [00:04<00:02, 26.68it/s][A
+DDIM Sampler:  64%|██████▍   | 129/200 [00:04<00:02, 26.67it/s][A
+DDIM Sampler:  66%|██████▌   | 132/200 [00:04<00:02, 26.66it/s][A
+DDIM Sampler:  68%|██████▊   | 135/200 [00:05<00:02, 26.68it/s][A
+DDIM Sampler:  69%|██████▉   | 138/200 [00:05<00:02, 26.66it/s][A
+DDIM Sampler:  70%|███████   | 141/200 [00:05<00:02, 26.67it/s][A
+DDIM Sampler:  72%|███████▏  | 144/200 [00:05<00:02, 26.69it/s][A
+DDIM Sampler:  74%|███████▎  | 147/200 [00:05<00:01, 26.69it/s][A
+DDIM Sampler:  75%|███████▌  | 150/200 [00:05<00:01, 26.68it/s][A
+DDIM Sampler:  76%|███████▋  | 153/200 [00:05<00:01, 26.67it/s][A
+DDIM Sampler:  78%|███████▊  | 156/200 [00:05<00:01, 26.65it/s][A
+DDIM Sampler:  80%|███████▉  | 159/200 [00:05<00:01, 26.63it/s][A
+DDIM Sampler:  81%|████████  | 162/200 [00:06<00:01, 26.62it/s][A
+DDIM Sampler:  82%|████████▎ | 165/200 [00:06<00:01, 26.62it/s][A
+DDIM Sampler:  84%|████████▍ | 168/200 [00:06<00:01, 26.64it/s][A
+DDIM Sampler:  86%|████████▌ | 171/200 [00:06<00:01, 26.63it/s][A
+DDIM Sampler:  87%|████████▋ | 174/200 [00:06<00:00, 26.65it/s][A
+DDIM Sampler:  88%|████████▊ | 177/200 [00:06<00:00, 26.66it/s][A
+DDIM Sampler:  90%|█████████ | 180/200 [00:06<00:00, 26.65it/s][A
+DDIM Sampler:  92%|█████████▏| 183/200 [00:06<00:00, 26.67it/s][A
+DDIM Sampler:  93%|█████████▎| 186/200 [00:06<00:00, 26.66it/s][A
+DDIM Sampler:  94%|█████████▍| 189/200 [00:07<00:00, 26.63it/s][A
+DDIM Sampler:  96%|█████████▌| 192/200 [00:07<00:00, 26.65it/s][A
+DDIM Sampler:  98%|█████████▊| 195/200 [00:07<00:00, 26.66it/s][A
+DDIM Sampler:  99%|█████████▉| 198/200 [00:07<00:00, 26.68it/s][ADDIM Sampler: 100%|██████████| 200/200 [00:07<00:00, 26.65it/s]
+
+DDIM Sampler:   0%|          | 0/200 [00:00<?, ?it/s][A
+DDIM Sampler:   2%|▏         | 3/200 [00:00<00:07, 25.55it/s][A
+DDIM Sampler:   3%|▎         | 6/200 [00:00<00:07, 25.63it/s][A
+DDIM Sampler:   4%|▍         | 9/200 [00:00<00:07, 25.70it/s][A
+DDIM Sampler:   6%|▌         | 12/200 [00:00<00:07, 25.74it/s][A
+DDIM Sampler:   8%|▊         | 15/200 [00:00<00:07, 25.73it/s][A
+DDIM Sampler:   9%|▉         | 18/200 [00:00<00:07, 25.73it/s][A
+DDIM Sampler:  10%|█         | 21/200 [00:00<00:06, 25.70it/s][A
+DDIM Sampler:  12%|█▏        | 24/200 [00:00<00:06, 25.72it/s][A
+DDIM Sampler:  14%|█▎        | 27/200 [00:01<00:06, 25.76it/s][A
+DDIM Sampler:  15%|█▌        | 30/200 [00:01<00:06, 25.75it/s][A
+DDIM Sampler:  16%|█▋        | 33/200 [00:01<00:06, 25.76it/s][A
+DDIM Sampler:  18%|█▊        | 36/200 [00:01<00:06, 25.73it/s][A
+DDIM Sampler:  20%|█▉        | 39/200 [00:01<00:06, 25.72it/s][A
+DDIM Sampler:  21%|██        | 42/200 [00:01<00:06, 25.71it/s][A
+DDIM Sampler:  22%|██▎       | 45/200 [00:01<00:06, 25.73it/s][A
+DDIM Sampler:  24%|██▍       | 48/200 [00:01<00:05, 25.74it/s][A
+DDIM Sampler:  26%|██▌       | 51/200 [00:01<00:05, 25.75it/s][A
+DDIM Sampler:  27%|██▋       | 54/200 [00:02<00:05, 25.74it/s][A
+DDIM Sampler:  28%|██▊       | 57/200 [00:02<00:05, 25.72it/s][A
+DDIM Sampler:  30%|███       | 60/200 [00:02<00:05, 25.73it/s][A
+DDIM Sampler:  32%|███▏      | 63/200 [00:02<00:05, 25.77it/s][A
+DDIM Sampler:  33%|███▎      | 66/200 [00:02<00:05, 25.77it/s][A
+DDIM Sampler:  34%|███▍      | 69/200 [00:02<00:05, 25.74it/s][A
+DDIM Sampler:  36%|███▌      | 72/200 [00:02<00:04, 25.73it/s][A
+DDIM Sampler:  38%|███▊      | 75/200 [00:02<00:04, 25.73it/s][A
+DDIM Sampler:  39%|███▉      | 78/200 [00:03<00:04, 25.73it/s][A
+DDIM Sampler:  40%|████      | 81/200 [00:03<00:04, 25.76it/s][A
+DDIM Sampler:  42%|████▏     | 84/200 [00:03<00:04, 25.77it/s][A
+DDIM Sampler:  44%|████▎     | 87/200 [00:03<00:04, 25.76it/s][A
+DDIM Sampler:  45%|████▌     | 90/200 [00:03<00:04, 25.72it/s][A
+DDIM Sampler:  46%|████▋     | 93/200 [00:03<00:04, 25.72it/s][A
+DDIM Sampler:  48%|████▊     | 96/200 [00:03<00:04, 25.73it/s][A
+DDIM Sampler:  50%|████▉     | 99/200 [00:03<00:03, 25.74it/s][A
+DDIM Sampler:  51%|█████     | 102/200 [00:03<00:03, 25.74it/s][A
+DDIM Sampler:  52%|█████▎    | 105/200 [00:04<00:03, 25.74it/s][A
+DDIM Sampler:  54%|█████▍    | 108/200 [00:04<00:03, 25.73it/s][A
+DDIM Sampler:  56%|█████▌    | 111/200 [00:04<00:03, 25.69it/s][A
+DDIM Sampler:  57%|█████▋    | 114/200 [00:04<00:03, 25.69it/s][A
+DDIM Sampler:  58%|█████▊    | 117/200 [00:04<00:03, 25.71it/s][A
+DDIM Sampler:  60%|██████    | 120/200 [00:04<00:03, 25.74it/s][A
+DDIM Sampler:  62%|██████▏   | 123/200 [00:04<00:02, 25.76it/s][A
+DDIM Sampler:  63%|██████▎   | 126/200 [00:04<00:02, 25.74it/s][A
+DDIM Sampler:  64%|██████▍   | 129/200 [00:05<00:02, 25.74it/s][A
+DDIM Sampler:  66%|██████▌   | 132/200 [00:05<00:02, 25.75it/s][A
+DDIM Sampler:  68%|██████▊   | 135/200 [00:05<00:02, 25.77it/s][A
+DDIM Sampler:  69%|██████▉   | 138/200 [00:05<00:02, 25.77it/s][A
+DDIM Sampler:  70%|███████   | 141/200 [00:05<00:02, 25.76it/s][A
+DDIM Sampler:  72%|███████▏  | 144/200 [00:05<00:02, 25.74it/s][A
+DDIM Sampler:  74%|███████▎  | 147/200 [00:05<00:02, 25.74it/s][A
+DDIM Sampler:  75%|███████▌  | 150/200 [00:05<00:01, 25.74it/s][A
+DDIM Sampler:  76%|███████▋  | 153/200 [00:05<00:01, 25.75it/s][A
+DDIM Sampler:  78%|███████▊  | 156/200 [00:06<00:01, 25.76it/s][A
+DDIM Sampler:  80%|███████▉  | 159/200 [00:06<00:01, 25.75it/s][A
+DDIM Sampler:  81%|████████  | 162/200 [00:06<00:01, 25.74it/s][A
+DDIM Sampler:  82%|████████▎ | 165/200 [00:06<00:01, 25.73it/s][A
+DDIM Sampler:  84%|████████▍ | 168/200 [00:06<00:01, 25.75it/s][A
+DDIM Sampler:  86%|████████▌ | 171/200 [00:06<00:01, 25.77it/s][A
+DDIM Sampler:  87%|████████▋ | 174/200 [00:06<00:01, 25.77it/s][A
+DDIM Sampler:  88%|████████▊ | 177/200 [00:06<00:00, 25.75it/s][A
+DDIM Sampler:  90%|█████████ | 180/200 [00:06<00:00, 25.75it/s][A
+DDIM Sampler:  92%|█████████▏| 183/200 [00:07<00:00, 25.76it/s][A
+DDIM Sampler:  93%|█████████▎| 186/200 [00:07<00:00, 25.77it/s][A
+DDIM Sampler:  94%|█████████▍| 189/200 [00:07<00:00, 25.79it/s][A
+DDIM Sampler:  96%|█████████▌| 192/200 [00:07<00:00, 25.76it/s][A
+DDIM Sampler:  98%|█████████▊| 195/200 [00:07<00:00, 25.71it/s][A
+DDIM Sampler:  99%|█████████▉| 198/200 [00:07<00:00, 25.72it/s][ADDIM Sampler: 100%|██████████| 200/200 [00:07<00:00, 25.74it/s]
+
+DDIM Sampler:   0%|          | 0/200 [00:00<?, ?it/s][A
+DDIM Sampler:   2%|▏         | 3/200 [00:00<00:07, 25.64it/s][A
+DDIM Sampler:   3%|▎         | 6/200 [00:00<00:07, 25.64it/s][A
+DDIM Sampler:   4%|▍         | 9/200 [00:00<00:07, 25.65it/s][A
+DDIM Sampler:   6%|▌         | 12/200 [00:00<00:07, 25.29it/s][A
+DDIM Sampler:   8%|▊         | 15/200 [00:00<00:07, 25.42it/s][A
+DDIM Sampler:   9%|▉         | 18/200 [00:00<00:07, 25.51it/s][A
+DDIM Sampler:  10%|█         | 21/200 [00:00<00:06, 25.58it/s][A
+DDIM Sampler:  12%|█▏        | 24/200 [00:00<00:06, 25.62it/s][A
+DDIM Sampler:  14%|█▎        | 27/200 [00:01<00:06, 25.64it/s][A
+DDIM Sampler:  15%|█▌        | 30/200 [00:01<00:06, 25.66it/s][A
+DDIM Sampler:  16%|█▋        | 33/200 [00:01<00:06, 25.64it/s][A
+DDIM Sampler:  18%|█▊        | 36/200 [00:01<00:06, 25.67it/s][A
+DDIM Sampler:  20%|█▉        | 39/200 [00:01<00:06, 25.69it/s][A
+DDIM Sampler:  21%|██        | 42/200 [00:01<00:06, 25.72it/s][A
+DDIM Sampler:  22%|██▎       | 45/200 [00:01<00:06, 25.71it/s][A
+DDIM Sampler:  24%|██▍       | 48/200 [00:01<00:05, 25.69it/s][A
+DDIM Sampler:  26%|██▌       | 51/200 [00:01<00:05, 25.66it/s][A
+DDIM Sampler:  27%|██▋       | 54/200 [00:02<00:05, 25.68it/s][A
+DDIM Sampler:  28%|██▊       | 57/200 [00:02<00:05, 25.70it/s][A
+DDIM Sampler:  30%|███       | 60/200 [00:02<00:05, 25.64it/s][A
+DDIM Sampler:  32%|███▏      | 63/200 [00:02<00:05, 25.62it/s][A
+DDIM Sampler:  33%|███▎      | 66/200 [00:02<00:05, 25.64it/s][A
+DDIM Sampler:  34%|███▍      | 69/200 [00:02<00:05, 25.64it/s][A
+DDIM Sampler:  36%|███▌      | 72/200 [00:02<00:04, 25.67it/s][A
+DDIM Sampler:  38%|███▊      | 75/200 [00:02<00:04, 25.67it/s][A
+DDIM Sampler:  39%|███▉      | 78/200 [00:03<00:04, 25.69it/s][A
+DDIM Sampler:  40%|████      | 81/200 [00:03<00:04, 25.72it/s][A
+DDIM Sampler:  42%|████▏     | 84/200 [00:03<00:04, 25.70it/s][A
+DDIM Sampler:  44%|████▎     | 87/200 [00:03<00:04, 25.68it/s][A
+DDIM Sampler:  45%|████▌     | 90/200 [00:03<00:04, 25.68it/s][A
+DDIM Sampler:  46%|████▋     | 93/200 [00:03<00:04, 25.68it/s][A
+DDIM Sampler:  48%|████▊     | 96/200 [00:03<00:04, 25.68it/s][A
+DDIM Sampler:  50%|████▉     | 99/200 [00:03<00:03, 25.69it/s][A
+DDIM Sampler:  51%|█████     | 102/200 [00:03<00:03, 25.72it/s][A
+DDIM Sampler:  52%|█████▎    | 105/200 [00:04<00:03, 25.72it/s][A
+DDIM Sampler:  54%|█████▍    | 108/200 [00:04<00:03, 25.71it/s][A
+DDIM Sampler:  56%|█████▌    | 111/200 [00:04<00:03, 25.74it/s][A
+DDIM Sampler:  57%|█████▋    | 114/200 [00:04<00:03, 25.74it/s][A
+DDIM Sampler:  58%|█████▊    | 117/200 [00:04<00:03, 25.74it/s][A
+DDIM Sampler:  60%|██████    | 120/200 [00:04<00:03, 25.73it/s][A
+DDIM Sampler:  62%|██████▏   | 123/200 [00:04<00:02, 25.70it/s][A
+DDIM Sampler:  63%|██████▎   | 126/200 [00:04<00:02, 25.68it/s][A
+DDIM Sampler:  64%|██████▍   | 129/200 [00:05<00:02, 25.69it/s][A
+DDIM Sampler:  66%|██████▌   | 132/200 [00:05<00:02, 25.70it/s][A
+DDIM Sampler:  68%|██████▊   | 135/200 [00:05<00:02, 25.72it/s][A
+DDIM Sampler:  69%|██████▉   | 138/200 [00:05<00:02, 25.71it/s][A
+DDIM Sampler:  70%|███████   | 141/200 [00:05<00:02, 25.68it/s][A
+DDIM Sampler:  72%|███████▏  | 144/200 [00:05<00:02, 25.66it/s][A
+DDIM Sampler:  74%|███████▎  | 147/200 [00:05<00:02, 25.68it/s][A
+DDIM Sampler:  75%|███████▌  | 150/200 [00:05<00:01, 25.69it/s][A
+DDIM Sampler:  76%|███████▋  | 153/200 [00:05<00:01, 25.71it/s][A
+DDIM Sampler:  78%|███████▊  | 156/200 [00:06<00:01, 25.71it/s][A
+DDIM Sampler:  80%|███████▉  | 159/200 [00:06<00:01, 25.70it/s][A
+DDIM Sampler:  81%|████████  | 162/200 [00:06<00:01, 25.69it/s][A
+DDIM Sampler:  82%|████████▎ | 165/200 [00:06<00:01, 25.65it/s][A
+DDIM Sampler:  84%|████████▍ | 168/200 [00:06<00:01, 25.68it/s][A
+DDIM Sampler:  86%|████████▌ | 171/200 [00:06<00:01, 25.69it/s][A
+DDIM Sampler:  87%|████████▋ | 174/200 [00:06<00:01, 25.70it/s][A
+DDIM Sampler:  88%|████████▊ | 177/200 [00:06<00:00, 25.69it/s][A
+DDIM Sampler:  90%|█████████ | 180/200 [00:07<00:00, 25.69it/s][A
+DDIM Sampler:  92%|█████████▏| 183/200 [00:07<00:00, 25.68it/s][A
+DDIM Sampler:  93%|█████████▎| 186/200 [00:07<00:00, 25.68it/s][A
+DDIM Sampler:  94%|█████████▍| 189/200 [00:07<00:00, 25.68it/s][A
+DDIM Sampler:  96%|█████████▌| 192/200 [00:07<00:00, 25.70it/s][A
+DDIM Sampler:  98%|█████████▊| 195/200 [00:07<00:00, 25.69it/s][A
+DDIM Sampler:  99%|█████████▉| 198/200 [00:07<00:00, 25.67it/s][ADDIM Sampler: 100%|██████████| 200/200 [00:07<00:00, 25.67it/s]
+
+Progressive Generation:   0%|          | 0/1000 [00:00<?, ?it/s][A
+Progressive Generation:   0%|          | 3/1000 [00:00<00:37, 26.60it/s][A
+Progressive Generation:   1%|          | 6/1000 [00:00<00:37, 26.81it/s][A
+Progressive Generation:   1%|          | 9/1000 [00:00<00:36, 26.90it/s][A
+Progressive Generation:   1%|          | 12/1000 [00:00<00:36, 26.91it/s][A
+Progressive Generation:   2%|▏         | 15/1000 [00:00<00:36, 26.94it/s][A
+Progressive Generation:   2%|▏         | 18/1000 [00:00<00:36, 26.96it/s][A
+Progressive Generation:   2%|▏         | 21/1000 [00:00<00:36, 26.95it/s][A
+Progressive Generation:   2%|▏         | 24/1000 [00:00<00:36, 26.99it/s][A
+Progressive Generation:   3%|▎         | 27/1000 [00:01<00:36, 26.99it/s][A
+Progressive Generation:   3%|▎         | 30/1000 [00:01<00:35, 27.00it/s][A
+Progressive Generation:   3%|▎         | 33/1000 [00:01<00:35, 26.97it/s][A
+Progressive Generation:   4%|▎         | 36/1000 [00:01<00:35, 27.01it/s][A
+Progressive Generation:   4%|▍         | 39/1000 [00:01<00:35, 26.99it/s][A
+Progressive Generation:   4%|▍         | 42/1000 [00:01<00:35, 27.00it/s][A
+Progressive Generation:   4%|▍         | 45/1000 [00:01<00:35, 27.00it/s][A
+Progressive Generation:   5%|▍         | 48/1000 [00:01<00:35, 26.97it/s][A
+Progressive Generation:   5%|▌         | 51/1000 [00:01<00:35, 26.96it/s][A
+Progressive Generation:   5%|▌         | 54/1000 [00:02<00:35, 26.97it/s][A
+Progressive Generation:   6%|▌         | 57/1000 [00:02<00:34, 26.98it/s][A
+Progressive Generation:   6%|▌         | 60/1000 [00:02<00:34, 27.02it/s][A
+Progressive Generation:   6%|▋         | 63/1000 [00:02<00:34, 27.05it/s][A
+Progressive Generation:   7%|▋         | 66/1000 [00:02<00:34, 27.02it/s][A
+Progressive Generation:   7%|▋         | 69/1000 [00:02<00:34, 27.01it/s][A
+Progressive Generation:   7%|▋         | 72/1000 [00:02<00:34, 27.00it/s][A
+Progressive Generation:   8%|▊         | 75/1000 [00:02<00:34, 26.98it/s][A
+Progressive Generation:   8%|▊         | 78/1000 [00:02<00:34, 27.01it/s][A
+Progressive Generation:   8%|▊         | 81/1000 [00:03<00:34, 26.99it/s][A
+Progressive Generation:   8%|▊         | 84/1000 [00:03<00:33, 27.01it/s][A
+Progressive Generation:   9%|▊         | 87/1000 [00:03<00:33, 27.00it/s][A
+Progressive Generation:   9%|▉         | 90/1000 [00:03<00:33, 27.02it/s][A
+Progressive Generation:   9%|▉         | 93/1000 [00:03<00:33, 26.98it/s][A
+Progressive Generation:  10%|▉         | 96/1000 [00:03<00:33, 26.98it/s][A
+Progressive Generation:  10%|▉         | 99/1000 [00:03<00:33, 26.97it/s][A
+Progressive Generation:  10%|█         | 102/1000 [00:03<00:33, 26.95it/s][A
+Progressive Generation:  10%|█         | 105/1000 [00:03<00:33, 26.95it/s][A
+Progressive Generation:  11%|█         | 108/1000 [00:04<00:33, 26.94it/s][A
+Progressive Generation:  11%|█         | 111/1000 [00:04<00:32, 26.96it/s][A
+Progressive Generation:  11%|█▏        | 114/1000 [00:04<00:32, 26.95it/s][A
+Progressive Generation:  12%|█▏        | 117/1000 [00:04<00:32, 26.95it/s][A
+Progressive Generation:  12%|█▏        | 120/1000 [00:04<00:32, 26.95it/s][A
+Progressive Generation:  12%|█▏        | 123/1000 [00:04<00:32, 26.97it/s][A
+Progressive Generation:  13%|█▎        | 126/1000 [00:04<00:32, 27.00it/s][A
+Progressive Generation:  13%|█▎        | 129/1000 [00:04<00:32, 26.99it/s][A
+Progressive Generation:  13%|█▎        | 132/1000 [00:04<00:32, 27.00it/s][A
+Progressive Generation:  14%|█▎        | 135/1000 [00:05<00:32, 26.99it/s][A
+Progressive Generation:  14%|█▍        | 138/1000 [00:05<00:31, 27.00it/s][A
+Progressive Generation:  14%|█▍        | 141/1000 [00:05<00:31, 27.00it/s][A
+Progressive Generation:  14%|█▍        | 144/1000 [00:05<00:31, 26.99it/s][A
+Progressive Generation:  15%|█▍        | 147/1000 [00:05<00:31, 26.96it/s][A
+Progressive Generation:  15%|█▌        | 150/1000 [00:05<00:31, 26.98it/s][A
+Progressive Generation:  15%|█▌        | 153/1000 [00:05<00:31, 27.01it/s][A
+Progressive Generation:  16%|█▌        | 156/1000 [00:05<00:31, 27.01it/s][A
+Progressive Generation:  16%|█▌        | 159/1000 [00:05<00:31, 27.02it/s][A
+Progressive Generation:  16%|█▌        | 162/1000 [00:06<00:31, 26.99it/s][A
+Progressive Generation:  16%|█▋        | 165/1000 [00:06<00:30, 27.00it/s][A
+Progressive Generation:  17%|█▋        | 168/1000 [00:06<00:30, 27.00it/s][A
+Progressive Generation:  17%|█▋        | 171/1000 [00:06<00:30, 27.00it/s][A
+Progressive Generation:  17%|█▋        | 174/1000 [00:06<00:30, 27.00it/s][A
+Progressive Generation:  18%|█▊        | 177/1000 [00:06<00:30, 27.01it/s][A
+Progressive Generation:  18%|█▊        | 180/1000 [00:06<00:30, 27.02it/s][A
+Progressive Generation:  18%|█▊        | 183/1000 [00:06<00:30, 27.02it/s][A
+Progressive Generation:  19%|█▊        | 186/1000 [00:06<00:30, 27.02it/s][A
+Progressive Generation:  19%|█▉        | 189/1000 [00:07<00:30, 27.01it/s][A
+Progressive Generation:  19%|█▉        | 192/1000 [00:07<00:29, 27.03it/s][A
+Progressive Generation:  20%|█▉        | 195/1000 [00:07<00:29, 27.01it/s][A
+Progressive Generation:  20%|█▉        | 198/1000 [00:07<00:29, 27.01it/s][A
+Progressive Generation:  20%|██        | 201/1000 [00:07<00:29, 27.01it/s][A
+Progressive Generation:  20%|██        | 204/1000 [00:07<00:29, 27.01it/s][A
+Progressive Generation:  21%|██        | 207/1000 [00:07<00:29, 27.03it/s][A
+Progressive Generation:  21%|██        | 210/1000 [00:07<00:29, 26.99it/s][A
+Progressive Generation:  21%|██▏       | 213/1000 [00:07<00:29, 27.03it/s][A
+Progressive Generation:  22%|██▏       | 216/1000 [00:08<00:29, 27.02it/s][A
+Progressive Generation:  22%|██▏       | 219/1000 [00:08<00:28, 27.04it/s][A
+Progressive Generation:  22%|██▏       | 222/1000 [00:08<00:28, 27.03it/s][A
+Progressive Generation:  22%|██▎       | 225/1000 [00:08<00:28, 27.04it/s][A
+Progressive Generation:  23%|██▎       | 228/1000 [00:08<00:28, 27.04it/s][A
+Progressive Generation:  23%|██▎       | 231/1000 [00:08<00:28, 27.02it/s][A
+Progressive Generation:  23%|██▎       | 234/1000 [00:08<00:28, 27.03it/s][A
+Progressive Generation:  24%|██▎       | 237/1000 [00:08<00:28, 27.02it/s][A
+Progressive Generation:  24%|██▍       | 240/1000 [00:08<00:28, 27.02it/s][A
+Progressive Generation:  24%|██▍       | 243/1000 [00:09<00:28, 26.99it/s][A
+Progressive Generation:  25%|██▍       | 246/1000 [00:09<00:27, 27.00it/s][A
+Progressive Generation:  25%|██▍       | 249/1000 [00:09<00:27, 26.99it/s][A
+Progressive Generation:  25%|██▌       | 252/1000 [00:09<00:27, 27.00it/s][A
+Progressive Generation:  26%|██▌       | 255/1000 [00:09<00:27, 27.00it/s][A
+Progressive Generation:  26%|██▌       | 258/1000 [00:09<00:27, 27.00it/s][A
+Progressive Generation:  26%|██▌       | 261/1000 [00:09<00:27, 27.01it/s][A
+Progressive Generation:  26%|██▋       | 264/1000 [00:09<00:27, 27.02it/s][A
+Progressive Generation:  27%|██▋       | 267/1000 [00:09<00:27, 27.04it/s][A
+Progressive Generation:  27%|██▋       | 270/1000 [00:10<00:27, 27.02it/s][A
+Progressive Generation:  27%|██▋       | 273/1000 [00:10<00:26, 27.03it/s][A
+Progressive Generation:  28%|██▊       | 276/1000 [00:10<00:26, 27.01it/s][A
+Progressive Generation:  28%|██▊       | 279/1000 [00:10<00:26, 27.03it/s][A
+Progressive Generation:  28%|██▊       | 282/1000 [00:10<00:26, 27.01it/s][A
+Progressive Generation:  28%|██▊       | 285/1000 [00:10<00:26, 27.00it/s][A
+Progressive Generation:  29%|██▉       | 288/1000 [00:10<00:26, 27.03it/s][A
+Progressive Generation:  29%|██▉       | 291/1000 [00:10<00:26, 27.00it/s][A
+Progressive Generation:  29%|██▉       | 294/1000 [00:10<00:26, 27.03it/s][A
+Progressive Generation:  30%|██▉       | 297/1000 [00:11<00:26, 27.01it/s][A
+Progressive Generation:  30%|███       | 300/1000 [00:11<00:25, 27.01it/s][A
+Progressive Generation:  30%|███       | 303/1000 [00:11<00:25, 26.99it/s][A
+Progressive Generation:  31%|███       | 306/1000 [00:11<00:25, 27.01it/s][A
+Progressive Generation:  31%|███       | 309/1000 [00:11<00:25, 27.01it/s][A
+Progressive Generation:  31%|███       | 312/1000 [00:11<00:25, 27.02it/s][A
+Progressive Generation:  32%|███▏      | 315/1000 [00:11<00:25, 27.03it/s][A
+Progressive Generation:  32%|███▏      | 318/1000 [00:11<00:25, 27.01it/s][A
+Progressive Generation:  32%|███▏      | 321/1000 [00:11<00:25, 27.02it/s][A
+Progressive Generation:  32%|███▏      | 324/1000 [00:12<00:25, 27.01it/s][A
+Progressive Generation:  33%|███▎      | 327/1000 [00:12<00:24, 27.02it/s][A
+Progressive Generation:  33%|███▎      | 330/1000 [00:12<00:24, 27.02it/s][A
+Progressive Generation:  33%|███▎      | 333/1000 [00:12<00:24, 27.01it/s][A
+Progressive Generation:  34%|███▎      | 336/1000 [00:12<00:24, 27.01it/s][A
+Progressive Generation:  34%|███▍      | 339/1000 [00:12<00:24, 27.03it/s][A
+Progressive Generation:  34%|███▍      | 342/1000 [00:12<00:24, 27.02it/s][A
+Progressive Generation:  34%|███▍      | 345/1000 [00:12<00:24, 27.01it/s][A
+Progressive Generation:  35%|███▍      | 348/1000 [00:12<00:24, 27.03it/s][A
+Progressive Generation:  35%|███▌      | 351/1000 [00:13<00:24, 27.02it/s][A
+Progressive Generation:  35%|███▌      | 354/1000 [00:13<00:23, 27.04it/s][A
+Progressive Generation:  36%|███▌      | 357/1000 [00:13<00:23, 27.01it/s][A
+Progressive Generation:  36%|███▌      | 360/1000 [00:13<00:23, 27.04it/s][A
+Progressive Generation:  36%|███▋      | 363/1000 [00:13<00:23, 27.02it/s][A
+Progressive Generation:  37%|███▋      | 366/1000 [00:13<00:23, 27.01it/s][A
+Progressive Generation:  37%|███▋      | 369/1000 [00:13<00:23, 27.02it/s][A
+Progressive Generation:  37%|███▋      | 372/1000 [00:13<00:23, 27.00it/s][A
+Progressive Generation:  38%|███▊      | 375/1000 [00:13<00:23, 27.01it/s][A
+Progressive Generation:  38%|███▊      | 378/1000 [00:14<00:23, 26.95it/s][A
+Progressive Generation:  38%|███▊      | 381/1000 [00:14<00:22, 27.00it/s][A
+Progressive Generation:  38%|███▊      | 384/1000 [00:14<00:22, 26.99it/s][A
+Progressive Generation:  39%|███▊      | 387/1000 [00:14<00:22, 27.00it/s][A
+Progressive Generation:  39%|███▉      | 390/1000 [00:14<00:22, 27.02it/s][A
+Progressive Generation:  39%|███▉      | 393/1000 [00:14<00:22, 27.00it/s][A
+Progressive Generation:  40%|███▉      | 396/1000 [00:14<00:22, 27.04it/s][A
+Progressive Generation:  40%|███▉      | 399/1000 [00:14<00:22, 27.03it/s][A
+Progressive Generation:  40%|████      | 402/1000 [00:14<00:22, 27.03it/s][A
+Progressive Generation:  40%|████      | 405/1000 [00:14<00:22, 27.02it/s][A
+Progressive Generation:  41%|████      | 408/1000 [00:15<00:21, 27.04it/s][A
+Progressive Generation:  41%|████      | 411/1000 [00:15<00:21, 27.01it/s][A
+Progressive Generation:  41%|████▏     | 414/1000 [00:15<00:21, 27.00it/s][A
+Progressive Generation:  42%|████▏     | 417/1000 [00:15<00:21, 27.00it/s][A
+Progressive Generation:  42%|████▏     | 420/1000 [00:15<00:21, 27.00it/s][A
+Progressive Generation:  42%|████▏     | 423/1000 [00:15<00:21, 27.00it/s][A
+Progressive Generation:  43%|████▎     | 426/1000 [00:15<00:21, 26.99it/s][A
+Progressive Generation:  43%|████▎     | 429/1000 [00:15<00:21, 26.99it/s][A
+Progressive Generation:  43%|████▎     | 432/1000 [00:15<00:21, 26.96it/s][A
+Progressive Generation:  44%|████▎     | 435/1000 [00:16<00:20, 26.96it/s][A
+Progressive Generation:  44%|████▍     | 438/1000 [00:16<00:20, 26.96it/s][A
+Progressive Generation:  44%|████▍     | 441/1000 [00:16<00:20, 26.99it/s][A
+Progressive Generation:  44%|████▍     | 444/1000 [00:16<00:20, 26.98it/s][A
+Progressive Generation:  45%|████▍     | 447/1000 [00:16<00:20, 26.99it/s][A
+Progressive Generation:  45%|████▌     | 450/1000 [00:16<00:20, 26.99it/s][A
+Progressive Generation:  45%|████▌     | 453/1000 [00:16<00:20, 26.97it/s][A
+Progressive Generation:  46%|████▌     | 456/1000 [00:16<00:20, 26.99it/s][A
+Progressive Generation:  46%|████▌     | 459/1000 [00:17<00:20, 26.98it/s][A
+Progressive Generation:  46%|████▌     | 462/1000 [00:17<00:19, 26.98it/s][A
+Progressive Generation:  46%|████▋     | 465/1000 [00:17<00:19, 26.98it/s][A
+Progressive Generation:  47%|████▋     | 468/1000 [00:17<00:19, 26.99it/s][A
+Progressive Generation:  47%|████▋     | 471/1000 [00:17<00:19, 27.00it/s][A
+Progressive Generation:  47%|████▋     | 474/1000 [00:17<00:19, 26.95it/s][A
+Progressive Generation:  48%|████▊     | 477/1000 [00:17<00:19, 26.97it/s][A
+Progressive Generation:  48%|████▊     | 480/1000 [00:17<00:19, 26.95it/s][A
+Progressive Generation:  48%|████▊     | 483/1000 [00:17<00:19, 26.94it/s][A
+Progressive Generation:  49%|████▊     | 486/1000 [00:18<00:19, 26.95it/s][A
+Progressive Generation:  49%|████▉     | 489/1000 [00:18<00:18, 26.96it/s][A
+Progressive Generation:  49%|████▉     | 492/1000 [00:18<00:18, 26.97it/s][A
+Progressive Generation:  50%|████▉     | 495/1000 [00:18<00:18, 26.97it/s][A
+Progressive Generation:  50%|████▉     | 498/1000 [00:18<00:18, 26.99it/s][A
+Progressive Generation:  50%|█████     | 501/1000 [00:18<00:18, 26.98it/s][A
+Progressive Generation:  50%|█████     | 504/1000 [00:18<00:18, 26.99it/s][A
+Progressive Generation:  51%|█████     | 507/1000 [00:18<00:18, 26.99it/s][A
+Progressive Generation:  51%|█████     | 510/1000 [00:18<00:18, 26.99it/s][A
+Progressive Generation:  51%|█████▏    | 513/1000 [00:19<00:18, 26.97it/s][A
+Progressive Generation:  52%|█████▏    | 516/1000 [00:19<00:17, 26.98it/s][A
+Progressive Generation:  52%|█████▏    | 519/1000 [00:19<00:17, 27.00it/s][A
+Progressive Generation:  52%|█████▏    | 522/1000 [00:19<00:17, 26.99it/s][A
+Progressive Generation:  52%|█████▎    | 525/1000 [00:19<00:17, 27.00it/s][A
+Progressive Generation:  53%|█████▎    | 528/1000 [00:19<00:17, 26.98it/s][A
+Progressive Generation:  53%|█████▎    | 531/1000 [00:19<00:17, 26.99it/s][A
+Progressive Generation:  53%|█████▎    | 534/1000 [00:19<00:17, 26.98it/s][A
+Progressive Generation:  54%|█████▎    | 537/1000 [00:19<00:17, 26.99it/s][A
+Progressive Generation:  54%|█████▍    | 540/1000 [00:20<00:17, 27.00it/s][A
+Progressive Generation:  54%|█████▍    | 543/1000 [00:20<00:16, 27.01it/s][A
+Progressive Generation:  55%|█████▍    | 546/1000 [00:20<00:16, 27.03it/s][A
+Progressive Generation:  55%|█████▍    | 549/1000 [00:20<00:16, 27.01it/s][A
+Progressive Generation:  55%|█████▌    | 552/1000 [00:20<00:16, 27.00it/s][A
+Progressive Generation:  56%|█████▌    | 555/1000 [00:20<00:16, 26.99it/s][A
+Progressive Generation:  56%|█████▌    | 558/1000 [00:20<00:16, 27.01it/s][A
+Progressive Generation:  56%|█████▌    | 561/1000 [00:20<00:16, 26.99it/s][A
+Progressive Generation:  56%|█████▋    | 564/1000 [00:20<00:16, 27.00it/s][A
+Progressive Generation:  57%|█████▋    | 567/1000 [00:21<00:16, 26.98it/s][A
+Progressive Generation:  57%|█████▋    | 570/1000 [00:21<00:15, 26.98it/s][A
+Progressive Generation:  57%|█████▋    | 573/1000 [00:21<00:15, 26.98it/s][A
+Progressive Generation:  58%|█████▊    | 576/1000 [00:21<00:15, 26.98it/s][A
+Progressive Generation:  58%|█████▊    | 579/1000 [00:21<00:15, 27.01it/s][A
+Progressive Generation:  58%|█████▊    | 582/1000 [00:21<00:15, 26.99it/s][A
+Progressive Generation:  58%|█████▊    | 585/1000 [00:21<00:15, 27.00it/s][A
+Progressive Generation:  59%|█████▉    | 588/1000 [00:21<00:15, 26.98it/s][A
+Progressive Generation:  59%|█████▉    | 591/1000 [00:21<00:15, 26.99it/s][A
+Progressive Generation:  59%|█████▉    | 594/1000 [00:22<00:15, 26.99it/s][A
+Progressive Generation:  60%|█████▉    | 597/1000 [00:22<00:14, 26.99it/s][A
+Progressive Generation:  60%|██████    | 600/1000 [00:22<00:14, 27.01it/s][A
+Progressive Generation:  60%|██████    | 603/1000 [00:22<00:14, 26.98it/s][A
+Progressive Generation:  61%|██████    | 606/1000 [00:22<00:14, 26.99it/s][A
+Progressive Generation:  61%|██████    | 609/1000 [00:22<00:14, 26.70it/s][A
+Progressive Generation:  61%|██████    | 612/1000 [00:22<00:14, 26.76it/s][A
+Progressive Generation:  62%|██████▏   | 615/1000 [00:22<00:14, 26.83it/s][A
+Progressive Generation:  62%|██████▏   | 618/1000 [00:22<00:14, 26.85it/s][A
+Progressive Generation:  62%|██████▏   | 621/1000 [00:23<00:14, 26.91it/s][A
+Progressive Generation:  62%|██████▏   | 624/1000 [00:23<00:13, 26.92it/s][A
+Progressive Generation:  63%|██████▎   | 627/1000 [00:23<00:13, 26.95it/s][A
+Progressive Generation:  63%|██████▎   | 630/1000 [00:23<00:13, 26.99it/s][A
+Progressive Generation:  63%|██████▎   | 633/1000 [00:23<00:13, 26.98it/s][A
+Progressive Generation:  64%|██████▎   | 636/1000 [00:23<00:13, 27.00it/s][A
+Progressive Generation:  64%|██████▍   | 639/1000 [00:23<00:13, 26.97it/s][A
+Progressive Generation:  64%|██████▍   | 642/1000 [00:23<00:13, 27.01it/s][A
+Progressive Generation:  64%|██████▍   | 645/1000 [00:23<00:13, 27.01it/s][A
+Progressive Generation:  65%|██████▍   | 648/1000 [00:24<00:13, 27.02it/s][A
+Progressive Generation:  65%|██████▌   | 651/1000 [00:24<00:12, 27.00it/s][A
+Progressive Generation:  65%|██████▌   | 654/1000 [00:24<00:12, 27.01it/s][A
+Progressive Generation:  66%|██████▌   | 657/1000 [00:24<00:12, 26.99it/s][A
+Progressive Generation:  66%|██████▌   | 660/1000 [00:24<00:12, 26.97it/s][A
+Progressive Generation:  66%|██████▋   | 663/1000 [00:24<00:12, 26.98it/s][A
+Progressive Generation:  67%|██████▋   | 666/1000 [00:24<00:12, 26.97it/s][A
+Progressive Generation:  67%|██████▋   | 669/1000 [00:24<00:12, 26.98it/s][A
+Progressive Generation:  67%|██████▋   | 672/1000 [00:24<00:12, 26.97it/s][A
+Progressive Generation:  68%|██████▊   | 675/1000 [00:25<00:12, 26.98it/s][A
+Progressive Generation:  68%|██████▊   | 678/1000 [00:25<00:11, 26.99it/s][A
+Progressive Generation:  68%|██████▊   | 681/1000 [00:25<00:11, 27.00it/s][A
+Progressive Generation:  68%|██████▊   | 684/1000 [00:25<00:11, 26.99it/s][A
+Progressive Generation:  69%|██████▊   | 687/1000 [00:25<00:11, 26.98it/s][A
+Progressive Generation:  69%|██████▉   | 690/1000 [00:25<00:11, 27.00it/s][A
+Progressive Generation:  69%|██████▉   | 693/1000 [00:25<00:11, 26.97it/s][A
+Progressive Generation:  70%|██████▉   | 696/1000 [00:25<00:11, 26.99it/s][A
+Progressive Generation:  70%|██████▉   | 699/1000 [00:25<00:11, 26.97it/s][A
+Progressive Generation:  70%|███████   | 702/1000 [00:26<00:11, 27.00it/s][A
+Progressive Generation:  70%|███████   | 705/1000 [00:26<00:10, 26.99it/s][A
+Progressive Generation:  71%|███████   | 708/1000 [00:26<00:10, 26.99it/s][A
+Progressive Generation:  71%|███████   | 711/1000 [00:26<00:10, 26.99it/s][A
+Progressive Generation:  71%|███████▏  | 714/1000 [00:26<00:10, 26.98it/s][A
+Progressive Generation:  72%|███████▏  | 717/1000 [00:26<00:10, 27.00it/s][A
+Progressive Generation:  72%|███████▏  | 720/1000 [00:26<00:10, 26.98it/s][A
+Progressive Generation:  72%|███████▏  | 723/1000 [00:26<00:10, 27.01it/s][A
+Progressive Generation:  73%|███████▎  | 726/1000 [00:26<00:10, 27.00it/s][A
+Progressive Generation:  73%|███████▎  | 729/1000 [00:27<00:10, 27.00it/s][A
+Progressive Generation:  73%|███████▎  | 732/1000 [00:27<00:09, 27.01it/s][A
+Progressive Generation:  74%|███████▎  | 735/1000 [00:27<00:09, 27.00it/s][A
+Progressive Generation:  74%|███████▍  | 738/1000 [00:27<00:09, 27.00it/s][A
+Progressive Generation:  74%|███████▍  | 741/1000 [00:27<00:09, 26.98it/s][A
+Progressive Generation:  74%|███████▍  | 744/1000 [00:27<00:09, 26.98it/s][A
+Progressive Generation:  75%|███████▍  | 747/1000 [00:27<00:09, 26.98it/s][A
+Progressive Generation:  75%|███████▌  | 750/1000 [00:27<00:09, 26.99it/s][A
+Progressive Generation:  75%|███████▌  | 753/1000 [00:27<00:09, 26.97it/s][A
+Progressive Generation:  76%|███████▌  | 756/1000 [00:28<00:09, 26.99it/s][A
+Progressive Generation:  76%|███████▌  | 759/1000 [00:28<00:08, 26.99it/s][A
+Progressive Generation:  76%|███████▌  | 762/1000 [00:28<00:08, 27.00it/s][A
+Progressive Generation:  76%|███████▋  | 765/1000 [00:28<00:08, 27.00it/s][A
+Progressive Generation:  77%|███████▋  | 768/1000 [00:28<00:08, 26.99it/s][A
+Progressive Generation:  77%|███████▋  | 771/1000 [00:28<00:08, 27.01it/s][A
+Progressive Generation:  77%|███████▋  | 774/1000 [00:28<00:08, 27.00it/s][A
+Progressive Generation:  78%|███████▊  | 777/1000 [00:28<00:08, 27.04it/s][A
+Progressive Generation:  78%|███████▊  | 780/1000 [00:28<00:08, 27.01it/s][A
+Progressive Generation:  78%|███████▊  | 783/1000 [00:29<00:08, 27.01it/s][A
+Progressive Generation:  79%|███████▊  | 786/1000 [00:29<00:07, 27.01it/s][A
+Progressive Generation:  79%|███████▉  | 789/1000 [00:29<00:07, 27.02it/s][A
+Progressive Generation:  79%|███████▉  | 792/1000 [00:29<00:07, 27.02it/s][A
+Progressive Generation:  80%|███████▉  | 795/1000 [00:29<00:07, 27.01it/s][A
+Progressive Generation:  80%|███████▉  | 798/1000 [00:29<00:07, 27.01it/s][A
+Progressive Generation:  80%|████████  | 801/1000 [00:29<00:07, 26.99it/s][A
+Progressive Generation:  80%|████████  | 804/1000 [00:29<00:07, 26.98it/s][A
+Progressive Generation:  81%|████████  | 807/1000 [00:29<00:07, 26.96it/s][A
+Progressive Generation:  81%|████████  | 810/1000 [00:30<00:07, 26.97it/s][A
+Progressive Generation:  81%|████████▏ | 813/1000 [00:30<00:06, 26.97it/s][A
+Progressive Generation:  82%|████████▏ | 816/1000 [00:30<00:06, 26.96it/s][A
+Progressive Generation:  82%|████████▏ | 819/1000 [00:30<00:06, 26.99it/s][A
+Progressive Generation:  82%|████████▏ | 822/1000 [00:30<00:06, 26.96it/s][A
+Progressive Generation:  82%|████████▎ | 825/1000 [00:30<00:06, 26.99it/s][A
+Progressive Generation:  83%|████████▎ | 828/1000 [00:30<00:06, 26.85it/s][A
+Progressive Generation:  83%|████████▎ | 831/1000 [00:30<00:06, 26.89it/s][A
+Progressive Generation:  83%|████████▎ | 834/1000 [00:30<00:06, 26.93it/s][A
+Progressive Generation:  84%|████████▎ | 837/1000 [00:31<00:06, 26.95it/s][A
+Progressive Generation:  84%|████████▍ | 840/1000 [00:31<00:05, 26.96it/s][A
+Progressive Generation:  84%|████████▍ | 843/1000 [00:31<00:05, 26.96it/s][A
+Progressive Generation:  85%|████████▍ | 846/1000 [00:31<00:05, 26.96it/s][A
+Progressive Generation:  85%|████████▍ | 849/1000 [00:31<00:05, 26.95it/s][A
+Progressive Generation:  85%|████████▌ | 852/1000 [00:31<00:05, 26.95it/s][A
+Progressive Generation:  86%|████████▌ | 855/1000 [00:31<00:05, 26.97it/s][A
+Progressive Generation:  86%|████████▌ | 858/1000 [00:31<00:05, 26.96it/s][A
+Progressive Generation:  86%|████████▌ | 861/1000 [00:31<00:05, 26.99it/s][A
+Progressive Generation:  86%|████████▋ | 864/1000 [00:32<00:05, 26.99it/s][A
+Progressive Generation:  87%|████████▋ | 867/1000 [00:32<00:04, 27.00it/s][A
+Progressive Generation:  87%|████████▋ | 870/1000 [00:32<00:04, 26.98it/s][A
+Progressive Generation:  87%|████████▋ | 873/1000 [00:32<00:04, 27.00it/s][A
+Progressive Generation:  88%|████████▊ | 876/1000 [00:32<00:04, 26.97it/s][A
+Progressive Generation:  88%|████████▊ | 879/1000 [00:32<00:04, 26.96it/s][A
+Progressive Generation:  88%|████████▊ | 882/1000 [00:32<00:04, 26.98it/s][A
+Progressive Generation:  88%|████████▊ | 885/1000 [00:32<00:04, 26.96it/s][A
+Progressive Generation:  89%|████████▉ | 888/1000 [00:32<00:04, 26.99it/s][A
+Progressive Generation:  89%|████████▉ | 891/1000 [00:33<00:04, 26.97it/s][A
+Progressive Generation:  89%|████████▉ | 894/1000 [00:33<00:03, 26.97it/s][A
+Progressive Generation:  90%|████████▉ | 897/1000 [00:33<00:03, 26.96it/s][A
+Progressive Generation:  90%|█████████ | 900/1000 [00:33<00:03, 26.98it/s][A
+Progressive Generation:  90%|█████████ | 903/1000 [00:33<00:03, 26.98it/s][A
+Progressive Generation:  91%|█████████ | 906/1000 [00:33<00:03, 26.98it/s][A
+Progressive Generation:  91%|█████████ | 909/1000 [00:33<00:03, 27.00it/s][A
+Progressive Generation:  91%|█████████ | 912/1000 [00:33<00:03, 26.98it/s][A
+Progressive Generation:  92%|█████████▏| 915/1000 [00:33<00:03, 27.00it/s][A
+Progressive Generation:  92%|█████████▏| 918/1000 [00:34<00:03, 26.98it/s][A
+Progressive Generation:  92%|█████████▏| 921/1000 [00:34<00:02, 26.99it/s][A
+Progressive Generation:  92%|█████████▏| 924/1000 [00:34<00:02, 26.99it/s][A
+Progressive Generation:  93%|█████████▎| 927/1000 [00:34<00:02, 26.99it/s][A
+Progressive Generation:  93%|█████████▎| 930/1000 [00:34<00:02, 26.99it/s][A
+Progressive Generation:  93%|█████████▎| 933/1000 [00:34<00:02, 26.98it/s][A
+Progressive Generation:  94%|█████████▎| 936/1000 [00:34<00:02, 26.98it/s][A
+Progressive Generation:  94%|█████████▍| 939/1000 [00:34<00:02, 26.95it/s][A
+Progressive Generation:  94%|█████████▍| 942/1000 [00:34<00:02, 26.96it/s][A
+Progressive Generation:  94%|█████████▍| 945/1000 [00:35<00:02, 26.96it/s][A
+Progressive Generation:  95%|█████████▍| 948/1000 [00:35<00:01, 26.97it/s][A
+Progressive Generation:  95%|█████████▌| 951/1000 [00:35<00:01, 26.99it/s][A
+Progressive Generation:  95%|█████████▌| 954/1000 [00:35<00:01, 26.99it/s][A
+Progressive Generation:  96%|█████████▌| 957/1000 [00:35<00:01, 27.00it/s][A
+Progressive Generation:  96%|█████████▌| 960/1000 [00:35<00:01, 27.00it/s][A
+Progressive Generation:  96%|█████████▋| 963/1000 [00:35<00:01, 27.02it/s][A
+Progressive Generation:  97%|█████████▋| 966/1000 [00:35<00:01, 27.00it/s][A
+Progressive Generation:  97%|█████████▋| 969/1000 [00:35<00:01, 27.02it/s][A
+Progressive Generation:  97%|█████████▋| 972/1000 [00:36<00:01, 26.99it/s][A
+Progressive Generation:  98%|█████████▊| 975/1000 [00:36<00:00, 27.02it/s][A
+Progressive Generation:  98%|█████████▊| 978/1000 [00:36<00:00, 27.01it/s][A
+Progressive Generation:  98%|█████████▊| 981/1000 [00:36<00:00, 27.00it/s][A
+Progressive Generation:  98%|█████████▊| 984/1000 [00:36<00:00, 26.99it/s][A
+Progressive Generation:  99%|█████████▊| 987/1000 [00:36<00:00, 26.94it/s][A
+Progressive Generation:  99%|█████████▉| 990/1000 [00:36<00:00, 26.86it/s][A
+Progressive Generation:  99%|█████████▉| 993/1000 [00:36<00:00, 26.88it/s][A
+Progressive Generation: 100%|█████████▉| 996/1000 [00:36<00:00, 26.90it/s][A
+Progressive Generation: 100%|█████████▉| 999/1000 [00:37<00:00, 26.93it/s][AProgressive Generation: 100%|██████████| 1000/1000 [00:37<00:00, 26.99it/s]
+
+Progressive Generation:   0%|          | 0/6 [00:00<?, ?it/s][A
+Progressive Generation:  67%|██████▋   | 4/6 [00:00<00:00, 19.93it/s][A
+Progressive Generation: 100%|██████████| 6/6 [00:00<00:00,  9.08it/s][AProgressive Generation: 100%|██████████| 6/6 [00:00<00:00, 10.19it/s]
+Average Epoch time: 1189.51 seconds
+Average Peak memory 28769.09MiB
+Epoch 74, global step 35174: val/loss_simple_ema was not in top 3
+slurmstepd: error: *** JOB 7088147 ON gpu1501 CANCELLED AT 2024-12-08T19:20:44 DUE TO TIME LIMIT ***

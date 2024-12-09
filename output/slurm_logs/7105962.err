@@ -1,0 +1,629 @@
+2024-12-08 18:42:15.451790: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-08 18:42:15.577580: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/ffmpeg-7.0-xny2fb2nz3demdcjhj6x74mcxz4iwmys/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/libiconv-1.17-jwjcds2nmpz7gpstqq22vty7jxldvpec/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/cuda-12.3.0-r72aozfqcf6mc3jurx6ndsw6kbcvmd2d/lib64:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/glew-2.2.0-plawm2jod5t5dzga2ktzstlqjp4fjt4q/lib64:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/boost-1.80.0-harukoycghoq6exyzhd3jonvup3gpqeo/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/zstd-1.5.5-zokfqscxl2bxqzikz5ftrnx6ugyaw4m5/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/mesa-22.1.6-6dbg5gqcfhgvls2kyds4s5qk4xgrltkw/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/zlib-1.2.13-jv5y5e7lstxpe7urzow6wr42b44vclu3/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/expat-2.5.0-zujcztprogy4dznn7eu65xext6qeih4r/lib:/usr/lib/nvidia
+2024-12-08 18:42:15.577614: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2024-12-08 18:42:16.687296: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/ffmpeg-7.0-xny2fb2nz3demdcjhj6x74mcxz4iwmys/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/libiconv-1.17-jwjcds2nmpz7gpstqq22vty7jxldvpec/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/cuda-12.3.0-r72aozfqcf6mc3jurx6ndsw6kbcvmd2d/lib64:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/glew-2.2.0-plawm2jod5t5dzga2ktzstlqjp4fjt4q/lib64:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/boost-1.80.0-harukoycghoq6exyzhd3jonvup3gpqeo/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/zstd-1.5.5-zokfqscxl2bxqzikz5ftrnx6ugyaw4m5/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/mesa-22.1.6-6dbg5gqcfhgvls2kyds4s5qk4xgrltkw/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/zlib-1.2.13-jv5y5e7lstxpe7urzow6wr42b44vclu3/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/expat-2.5.0-zujcztprogy4dznn7eu65xext6qeih4r/lib:/usr/lib/nvidia
+2024-12-08 18:42:16.687417: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/ffmpeg-7.0-xny2fb2nz3demdcjhj6x74mcxz4iwmys/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/libiconv-1.17-jwjcds2nmpz7gpstqq22vty7jxldvpec/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/cuda-12.3.0-r72aozfqcf6mc3jurx6ndsw6kbcvmd2d/lib64:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/glew-2.2.0-plawm2jod5t5dzga2ktzstlqjp4fjt4q/lib64:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/boost-1.80.0-harukoycghoq6exyzhd3jonvup3gpqeo/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/zstd-1.5.5-zokfqscxl2bxqzikz5ftrnx6ugyaw4m5/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/mesa-22.1.6-6dbg5gqcfhgvls2kyds4s5qk4xgrltkw/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/zlib-1.2.13-jv5y5e7lstxpe7urzow6wr42b44vclu3/lib:/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/expat-2.5.0-zujcztprogy4dznn7eu65xext6qeih4r/lib:/usr/lib/nvidia
+2024-12-08 18:42:16.687436: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+Global seed set to 23
+/oscar/scratch/daggarw5/latent-diffusion/ldm/models/autoencoder.py:314: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  sd = torch.load(path, map_location="cpu")["state_dict"]
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+Global seed set to 23
+initializing ddp: GLOBAL_RANK: 0, MEMBER: 1/1
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All DDP processes registered. Starting ddp with 1 processes
+----------------------------------------------------------------------------------------------------
+
+/users/daggarw5/.conda/envs/ldm/lib/python3.8/site-packages/pytorch_lightning/core/datamodule.py:423: LightningDeprecationWarning: DataModule.setup has already been called, so it will not be called again. In v1.6 this behavior will change to always call DataModule.setup.
+  rank_zero_deprecation(
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Set SLURM handle signals.
+
+  | Name              | Type             | Params
+-------------------------------------------------------
+0 | model             | DiffusionWrapper | 294 M 
+1 | model_ema         | LitEma           | 0     
+2 | first_stage_model | AutoencoderKL    | 83.7 M
+-------------------------------------------------------
+294 M     Trainable params
+83.7 M    Non-trainable params
+378 M     Total params
+1,514.483 Total estimated model params size (MB)
+/users/daggarw5/.conda/envs/ldm/lib/python3.8/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 5 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Global seed set to 23
+[rank0]:[W1208 18:42:47.677010312 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+/users/daggarw5/.conda/envs/ldm/lib/python3.8/site-packages/torch/autograd/graph.py:769: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [192, 384, 1, 1], strides() = [384, 1, 384, 384]
+bucket_view.sizes() = [192, 384, 1, 1], strides() = [384, 1, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:327.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/users/daggarw5/.conda/envs/ldm/lib/python3.8/site-packages/pytorch_lightning/trainer/callback_hook.py:102: LightningDeprecationWarning: The signature of `Callback.on_train_epoch_end` has changed in v1.3. `outputs` parameter has been removed. Support for the old signature will be removed in v1.5
+  warning_cache.deprecation(
+Average Epoch time: 1195.32 seconds
+Average Peak memory 28746.71MiB
+Epoch 0, global step 520: val/loss_simple_ema reached 0.66396 (best 0.66396), saving model to "logs/2024-12-08T18-42-19_lsun_churches-ldm-kl-8/checkpoints/epoch=000000.ckpt" as top 3
+Average Epoch time: 1184.74 seconds
+Average Peak memory 28752.19MiB
+Epoch 1, global step 1041: val/loss_simple_ema reached 0.36399 (best 0.36399), saving model to "logs/2024-12-08T18-42-19_lsun_churches-ldm-kl-8/checkpoints/epoch=000001.ckpt" as top 3
+Average Epoch time: 1183.84 seconds
+Average Peak memory 28753.47MiB
+Epoch 2, global step 1562: val/loss_simple_ema reached 0.26553 (best 0.26553), saving model to "logs/2024-12-08T18-42-19_lsun_churches-ldm-kl-8/checkpoints/epoch=000002.ckpt" as top 3
+Average Epoch time: 1184.82 seconds
+Average Peak memory 28752.19MiB
+Epoch 3, global step 2083: val/loss_simple_ema reached 0.26764 (best 0.26553), saving model to "logs/2024-12-08T18-42-19_lsun_churches-ldm-kl-8/checkpoints/epoch=000003.ckpt" as top 3
+Average Epoch time: 1184.83 seconds
+Average Peak memory 28753.47MiB
+Epoch 4, global step 2604: val/loss_simple_ema reached 0.26859 (best 0.26553), saving model to "logs/2024-12-08T18-42-19_lsun_churches-ldm-kl-8/checkpoints/epoch=000004.ckpt" as top 3
+Average Epoch time: 1185.46 seconds
+Average Peak memory 28752.19MiB
+Epoch 5, global step 3125: val/loss_simple_ema reached 0.26114 (best 0.26114), saving model to "logs/2024-12-08T18-42-19_lsun_churches-ldm-kl-8/checkpoints/epoch=000005.ckpt" as top 3
+Average Epoch time: 1186.62 seconds
+Average Peak memory 28753.47MiB
+Epoch 6, global step 3646: val/loss_simple_ema reached 0.26405 (best 0.26114), saving model to "logs/2024-12-08T18-42-19_lsun_churches-ldm-kl-8/checkpoints/epoch=000006.ckpt" as top 3
+Average Epoch time: 1186.95 seconds
+Average Peak memory 28752.19MiB
+Epoch 7, global step 4167: val/loss_simple_ema reached 0.26377 (best 0.26114), saving model to "logs/2024-12-08T18-42-19_lsun_churches-ldm-kl-8/checkpoints/epoch=000007.ckpt" as top 3
+Average Epoch time: 1186.57 seconds
+Average Peak memory 28753.47MiB
+Epoch 8, global step 4688: val/loss_simple_ema reached 0.24590 (best 0.24590), saving model to "logs/2024-12-08T18-42-19_lsun_churches-ldm-kl-8/checkpoints/epoch=000008.ckpt" as top 3
+
+DDIM Sampler:   0%|          | 0/200 [00:00<?, ?it/s][A
+DDIM Sampler:   0%|          | 1/200 [00:00<01:04,  3.10it/s][A
+DDIM Sampler:   2%|▏         | 4/200 [00:00<00:17, 10.89it/s][A
+DDIM Sampler:   4%|▎         | 7/200 [00:00<00:12, 15.93it/s][A
+DDIM Sampler:   5%|▌         | 10/200 [00:00<00:09, 19.28it/s][A
+DDIM Sampler:   6%|▋         | 13/200 [00:00<00:08, 21.60it/s][A
+DDIM Sampler:   8%|▊         | 16/200 [00:00<00:07, 23.15it/s][A
+DDIM Sampler:  10%|▉         | 19/200 [00:01<00:07, 24.14it/s][A
+DDIM Sampler:  11%|█         | 22/200 [00:01<00:07, 24.90it/s][A
+DDIM Sampler:  12%|█▎        | 25/200 [00:01<00:06, 25.39it/s][A
+DDIM Sampler:  14%|█▍        | 28/200 [00:01<00:06, 25.73it/s][A
+DDIM Sampler:  16%|█▌        | 31/200 [00:01<00:06, 26.03it/s][A
+DDIM Sampler:  17%|█▋        | 34/200 [00:01<00:06, 26.22it/s][A
+DDIM Sampler:  18%|█▊        | 37/200 [00:01<00:06, 26.26it/s][A
+DDIM Sampler:  20%|██        | 40/200 [00:01<00:06, 26.09it/s][A
+DDIM Sampler:  22%|██▏       | 43/200 [00:01<00:06, 25.94it/s][A
+DDIM Sampler:  23%|██▎       | 46/200 [00:02<00:05, 26.13it/s][A
+DDIM Sampler:  24%|██▍       | 49/200 [00:02<00:05, 26.25it/s][A
+DDIM Sampler:  26%|██▌       | 52/200 [00:02<00:05, 26.39it/s][A
+DDIM Sampler:  28%|██▊       | 55/200 [00:02<00:05, 26.41it/s][A
+DDIM Sampler:  29%|██▉       | 58/200 [00:02<00:05, 26.17it/s][A
+DDIM Sampler:  30%|███       | 61/200 [00:02<00:05, 26.08it/s][A
+DDIM Sampler:  32%|███▏      | 64/200 [00:02<00:05, 26.04it/s][A
+DDIM Sampler:  34%|███▎      | 67/200 [00:02<00:05, 26.21it/s][A
+DDIM Sampler:  35%|███▌      | 70/200 [00:02<00:04, 26.34it/s][A
+DDIM Sampler:  36%|███▋      | 73/200 [00:03<00:04, 26.44it/s][A
+DDIM Sampler:  38%|███▊      | 76/200 [00:03<00:04, 26.35it/s][A
+DDIM Sampler:  40%|███▉      | 79/200 [00:03<00:04, 26.42it/s][A
+DDIM Sampler:  41%|████      | 82/200 [00:03<00:04, 26.49it/s][A
+DDIM Sampler:  42%|████▎     | 85/200 [00:03<00:04, 26.42it/s][A
+DDIM Sampler:  44%|████▍     | 88/200 [00:03<00:04, 26.40it/s][A
+DDIM Sampler:  46%|████▌     | 91/200 [00:03<00:04, 26.38it/s][A
+DDIM Sampler:  47%|████▋     | 94/200 [00:03<00:04, 26.31it/s][A
+DDIM Sampler:  48%|████▊     | 97/200 [00:03<00:03, 26.29it/s][A
+DDIM Sampler:  50%|█████     | 100/200 [00:04<00:03, 26.39it/s][A
+DDIM Sampler:  52%|█████▏    | 103/200 [00:04<00:03, 26.31it/s][A
+DDIM Sampler:  53%|█████▎    | 106/200 [00:04<00:03, 26.19it/s][A
+DDIM Sampler:  55%|█████▍    | 109/200 [00:04<00:03, 26.02it/s][A
+DDIM Sampler:  56%|█████▌    | 112/200 [00:04<00:03, 25.94it/s][A
+DDIM Sampler:  57%|█████▊    | 115/200 [00:04<00:03, 25.93it/s][A
+DDIM Sampler:  59%|█████▉    | 118/200 [00:04<00:03, 26.16it/s][A
+DDIM Sampler:  60%|██████    | 121/200 [00:04<00:03, 26.32it/s][A
+DDIM Sampler:  62%|██████▏   | 124/200 [00:04<00:02, 26.44it/s][A
+DDIM Sampler:  64%|██████▎   | 127/200 [00:05<00:02, 26.45it/s][A
+DDIM Sampler:  65%|██████▌   | 130/200 [00:05<00:02, 26.47it/s][A
+DDIM Sampler:  66%|██████▋   | 133/200 [00:05<00:02, 26.25it/s][A
+DDIM Sampler:  68%|██████▊   | 136/200 [00:05<00:02, 26.08it/s][A
+DDIM Sampler:  70%|██████▉   | 139/200 [00:05<00:02, 26.07it/s][A
+DDIM Sampler:  71%|███████   | 142/200 [00:05<00:02, 26.20it/s][A
+DDIM Sampler:  72%|███████▎  | 145/200 [00:05<00:02, 26.34it/s][A
+DDIM Sampler:  74%|███████▍  | 148/200 [00:05<00:01, 26.41it/s][A
+DDIM Sampler:  76%|███████▌  | 151/200 [00:06<00:01, 26.47it/s][A
+DDIM Sampler:  77%|███████▋  | 154/200 [00:06<00:01, 26.54it/s][A
+DDIM Sampler:  78%|███████▊  | 157/200 [00:06<00:01, 26.56it/s][A
+DDIM Sampler:  80%|████████  | 160/200 [00:06<00:01, 26.48it/s][A
+DDIM Sampler:  82%|████████▏ | 163/200 [00:06<00:01, 26.39it/s][A
+DDIM Sampler:  83%|████████▎ | 166/200 [00:06<00:01, 26.25it/s][A
+DDIM Sampler:  84%|████████▍ | 169/200 [00:06<00:01, 26.38it/s][A
+DDIM Sampler:  86%|████████▌ | 172/200 [00:06<00:01, 26.49it/s][A
+DDIM Sampler:  88%|████████▊ | 175/200 [00:06<00:00, 26.54it/s][A
+DDIM Sampler:  89%|████████▉ | 178/200 [00:07<00:00, 26.53it/s][A
+DDIM Sampler:  90%|█████████ | 181/200 [00:07<00:00, 26.59it/s][A
+DDIM Sampler:  92%|█████████▏| 184/200 [00:07<00:00, 26.59it/s][A
+DDIM Sampler:  94%|█████████▎| 187/200 [00:07<00:00, 26.62it/s][A
+DDIM Sampler:  95%|█████████▌| 190/200 [00:07<00:00, 26.64it/s][A
+DDIM Sampler:  96%|█████████▋| 193/200 [00:07<00:00, 26.45it/s][A
+DDIM Sampler:  98%|█████████▊| 196/200 [00:07<00:00, 26.20it/s][A
+DDIM Sampler: 100%|█████████▉| 199/200 [00:07<00:00, 26.05it/s][ADDIM Sampler: 100%|██████████| 200/200 [00:07<00:00, 25.40it/s]
+
+DDIM Sampler:   0%|          | 0/200 [00:00<?, ?it/s][A
+DDIM Sampler:   1%|          | 2/200 [00:00<00:13, 15.10it/s][A
+DDIM Sampler:   2%|▎         | 5/200 [00:00<00:09, 20.71it/s][A
+DDIM Sampler:   4%|▍         | 8/200 [00:00<00:08, 22.53it/s][A
+DDIM Sampler:   6%|▌         | 11/200 [00:00<00:08, 23.36it/s][A
+DDIM Sampler:   7%|▋         | 14/200 [00:00<00:07, 24.15it/s][A
+DDIM Sampler:   8%|▊         | 17/200 [00:00<00:07, 24.61it/s][A
+DDIM Sampler:  10%|█         | 20/200 [00:00<00:07, 24.66it/s][A
+DDIM Sampler:  12%|█▏        | 23/200 [00:00<00:07, 24.68it/s][A
+DDIM Sampler:  13%|█▎        | 26/200 [00:01<00:07, 24.78it/s][A
+DDIM Sampler:  14%|█▍        | 29/200 [00:01<00:06, 25.06it/s][A
+DDIM Sampler:  16%|█▌        | 32/200 [00:01<00:06, 25.26it/s][A
+DDIM Sampler:  18%|█▊        | 35/200 [00:01<00:06, 25.22it/s][A
+DDIM Sampler:  19%|█▉        | 38/200 [00:01<00:06, 25.08it/s][A
+DDIM Sampler:  20%|██        | 41/200 [00:01<00:06, 24.97it/s][A
+DDIM Sampler:  22%|██▏       | 44/200 [00:01<00:06, 25.04it/s][A
+DDIM Sampler:  24%|██▎       | 47/200 [00:01<00:06, 25.19it/s][A
+DDIM Sampler:  25%|██▌       | 50/200 [00:02<00:05, 25.12it/s][A
+DDIM Sampler:  26%|██▋       | 53/200 [00:02<00:05, 25.09it/s][A
+DDIM Sampler:  28%|██▊       | 56/200 [00:02<00:05, 25.00it/s][A
+DDIM Sampler:  30%|██▉       | 59/200 [00:02<00:05, 25.20it/s][A
+DDIM Sampler:  31%|███       | 62/200 [00:02<00:05, 25.38it/s][A
+DDIM Sampler:  32%|███▎      | 65/200 [00:02<00:05, 25.51it/s][A
+DDIM Sampler:  34%|███▍      | 68/200 [00:02<00:05, 25.59it/s][A
+DDIM Sampler:  36%|███▌      | 71/200 [00:02<00:05, 25.63it/s][A
+DDIM Sampler:  37%|███▋      | 74/200 [00:02<00:04, 25.66it/s][A
+DDIM Sampler:  38%|███▊      | 77/200 [00:03<00:04, 25.71it/s][A
+DDIM Sampler:  40%|████      | 80/200 [00:03<00:04, 25.68it/s][A
+DDIM Sampler:  42%|████▏     | 83/200 [00:03<00:04, 25.64it/s][A
+DDIM Sampler:  43%|████▎     | 86/200 [00:03<00:04, 25.64it/s][A
+DDIM Sampler:  44%|████▍     | 89/200 [00:03<00:04, 25.55it/s][A
+DDIM Sampler:  46%|████▌     | 92/200 [00:03<00:04, 25.32it/s][A
+DDIM Sampler:  48%|████▊     | 95/200 [00:03<00:04, 25.17it/s][A
+DDIM Sampler:  49%|████▉     | 98/200 [00:03<00:04, 25.07it/s][A
+DDIM Sampler:  50%|█████     | 101/200 [00:04<00:03, 25.03it/s][A
+DDIM Sampler:  52%|█████▏    | 104/200 [00:04<00:03, 25.23it/s][A
+DDIM Sampler:  54%|█████▎    | 107/200 [00:04<00:03, 25.33it/s][A
+DDIM Sampler:  55%|█████▌    | 110/200 [00:04<00:03, 25.40it/s][A
+DDIM Sampler:  56%|█████▋    | 113/200 [00:04<00:03, 25.24it/s][A
+DDIM Sampler:  58%|█████▊    | 116/200 [00:04<00:03, 25.09it/s][A
+DDIM Sampler:  60%|█████▉    | 119/200 [00:04<00:03, 25.08it/s][A
+DDIM Sampler:  61%|██████    | 122/200 [00:04<00:03, 25.17it/s][A
+DDIM Sampler:  62%|██████▎   | 125/200 [00:05<00:02, 25.35it/s][A
+DDIM Sampler:  64%|██████▍   | 128/200 [00:05<00:02, 25.45it/s][A
+DDIM Sampler:  66%|██████▌   | 131/200 [00:05<00:02, 25.53it/s][A
+DDIM Sampler:  67%|██████▋   | 134/200 [00:05<00:02, 25.47it/s][A
+DDIM Sampler:  68%|██████▊   | 137/200 [00:05<00:02, 25.40it/s][A
+DDIM Sampler:  70%|███████   | 140/200 [00:05<00:02, 25.21it/s][A
+DDIM Sampler:  72%|███████▏  | 143/200 [00:05<00:02, 25.06it/s][A
+DDIM Sampler:  73%|███████▎  | 146/200 [00:05<00:02, 25.06it/s][A
+DDIM Sampler:  74%|███████▍  | 149/200 [00:05<00:02, 25.26it/s][A
+DDIM Sampler:  76%|███████▌  | 152/200 [00:06<00:01, 25.41it/s][A
+DDIM Sampler:  78%|███████▊  | 155/200 [00:06<00:01, 25.50it/s][A
+DDIM Sampler:  79%|███████▉  | 158/200 [00:06<00:01, 25.59it/s][A
+DDIM Sampler:  80%|████████  | 161/200 [00:06<00:01, 25.56it/s][A
+DDIM Sampler:  82%|████████▏ | 164/200 [00:06<00:01, 25.59it/s][A
+DDIM Sampler:  84%|████████▎ | 167/200 [00:06<00:01, 25.63it/s][A
+DDIM Sampler:  85%|████████▌ | 170/200 [00:06<00:01, 25.63it/s][A
+DDIM Sampler:  86%|████████▋ | 173/200 [00:06<00:01, 25.67it/s][A
+DDIM Sampler:  88%|████████▊ | 176/200 [00:07<00:00, 25.68it/s][A
+DDIM Sampler:  90%|████████▉ | 179/200 [00:07<00:00, 25.65it/s][A
+DDIM Sampler:  91%|█████████ | 182/200 [00:07<00:00, 25.37it/s][A
+DDIM Sampler:  92%|█████████▎| 185/200 [00:07<00:00, 25.25it/s][A
+DDIM Sampler:  94%|█████████▍| 188/200 [00:07<00:00, 25.12it/s][A
+DDIM Sampler:  96%|█████████▌| 191/200 [00:07<00:00, 25.02it/s][A
+DDIM Sampler:  97%|█████████▋| 194/200 [00:07<00:00, 24.97it/s][A
+DDIM Sampler:  98%|█████████▊| 197/200 [00:07<00:00, 25.16it/s][A
+DDIM Sampler: 100%|██████████| 200/200 [00:07<00:00, 25.18it/s][ADDIM Sampler: 100%|██████████| 200/200 [00:07<00:00, 25.13it/s]
+
+DDIM Sampler:   0%|          | 0/200 [00:00<?, ?it/s][A
+DDIM Sampler:   2%|▏         | 3/200 [00:00<00:07, 25.45it/s][A
+DDIM Sampler:   3%|▎         | 6/200 [00:00<00:07, 25.54it/s][A
+DDIM Sampler:   4%|▍         | 9/200 [00:00<00:07, 25.56it/s][A
+DDIM Sampler:   6%|▌         | 12/200 [00:00<00:07, 25.60it/s][A
+DDIM Sampler:   8%|▊         | 15/200 [00:00<00:07, 25.62it/s][A
+DDIM Sampler:   9%|▉         | 18/200 [00:00<00:07, 25.51it/s][A
+DDIM Sampler:  10%|█         | 21/200 [00:00<00:06, 25.59it/s][A
+DDIM Sampler:  12%|█▏        | 24/200 [00:00<00:06, 25.59it/s][A
+DDIM Sampler:  14%|█▎        | 27/200 [00:01<00:06, 25.61it/s][A
+DDIM Sampler:  15%|█▌        | 30/200 [00:01<00:06, 25.48it/s][A
+DDIM Sampler:  16%|█▋        | 33/200 [00:01<00:06, 25.47it/s][A
+DDIM Sampler:  18%|█▊        | 36/200 [00:01<00:06, 25.38it/s][A
+DDIM Sampler:  20%|█▉        | 39/200 [00:01<00:06, 25.45it/s][A
+DDIM Sampler:  21%|██        | 42/200 [00:01<00:06, 25.50it/s][A
+DDIM Sampler:  22%|██▎       | 45/200 [00:01<00:06, 25.37it/s][A
+DDIM Sampler:  24%|██▍       | 48/200 [00:01<00:06, 25.17it/s][A
+DDIM Sampler:  26%|██▌       | 51/200 [00:02<00:05, 25.07it/s][A
+DDIM Sampler:  27%|██▋       | 54/200 [00:02<00:05, 25.22it/s][A
+DDIM Sampler:  28%|██▊       | 57/200 [00:02<00:05, 25.11it/s][A
+DDIM Sampler:  30%|███       | 60/200 [00:02<00:05, 25.00it/s][A
+DDIM Sampler:  32%|███▏      | 63/200 [00:02<00:05, 24.99it/s][A
+DDIM Sampler:  33%|███▎      | 66/200 [00:02<00:05, 25.01it/s][A
+DDIM Sampler:  34%|███▍      | 69/200 [00:02<00:05, 24.92it/s][A
+DDIM Sampler:  36%|███▌      | 72/200 [00:02<00:05, 24.96it/s][A
+DDIM Sampler:  38%|███▊      | 75/200 [00:02<00:04, 25.16it/s][A
+DDIM Sampler:  39%|███▉      | 78/200 [00:03<00:04, 25.29it/s][A
+DDIM Sampler:  40%|████      | 81/200 [00:03<00:04, 25.41it/s][A
+DDIM Sampler:  42%|████▏     | 84/200 [00:03<00:04, 25.45it/s][A
+DDIM Sampler:  44%|████▎     | 87/200 [00:03<00:04, 25.41it/s][A
+DDIM Sampler:  45%|████▌     | 90/200 [00:03<00:04, 25.45it/s][A
+DDIM Sampler:  46%|████▋     | 93/200 [00:03<00:04, 25.50it/s][A
+DDIM Sampler:  48%|████▊     | 96/200 [00:03<00:04, 25.53it/s][A
+DDIM Sampler:  50%|████▉     | 99/200 [00:03<00:03, 25.57it/s][A
+DDIM Sampler:  51%|█████     | 102/200 [00:04<00:03, 25.60it/s][A
+DDIM Sampler:  52%|█████▎    | 105/200 [00:04<00:03, 25.50it/s][A
+DDIM Sampler:  54%|█████▍    | 108/200 [00:04<00:03, 25.37it/s][A
+DDIM Sampler:  56%|█████▌    | 111/200 [00:04<00:03, 25.19it/s][A
+DDIM Sampler:  57%|█████▋    | 114/200 [00:04<00:03, 25.08it/s][A
+DDIM Sampler:  58%|█████▊    | 117/200 [00:04<00:03, 24.97it/s][A
+DDIM Sampler:  60%|██████    | 120/200 [00:04<00:03, 24.92it/s][A
+DDIM Sampler:  62%|██████▏   | 123/200 [00:04<00:03, 24.94it/s][A
+DDIM Sampler:  63%|██████▎   | 126/200 [00:04<00:02, 24.91it/s][A
+DDIM Sampler:  64%|██████▍   | 129/200 [00:05<00:02, 24.84it/s][A
+DDIM Sampler:  66%|██████▌   | 132/200 [00:05<00:02, 25.07it/s][A
+DDIM Sampler:  68%|██████▊   | 135/200 [00:05<00:02, 25.22it/s][A
+DDIM Sampler:  69%|██████▉   | 138/200 [00:05<00:02, 25.35it/s][A
+DDIM Sampler:  70%|███████   | 141/200 [00:05<00:02, 25.42it/s][A
+DDIM Sampler:  72%|███████▏  | 144/200 [00:05<00:02, 25.48it/s][A
+DDIM Sampler:  74%|███████▎  | 147/200 [00:05<00:02, 25.43it/s][A
+DDIM Sampler:  75%|███████▌  | 150/200 [00:05<00:01, 25.48it/s][A
+DDIM Sampler:  76%|███████▋  | 153/200 [00:06<00:01, 25.55it/s][A
+DDIM Sampler:  78%|███████▊  | 156/200 [00:06<00:01, 25.59it/s][A
+DDIM Sampler:  80%|███████▉  | 159/200 [00:06<00:01, 25.60it/s][A
+DDIM Sampler:  81%|████████  | 162/200 [00:06<00:01, 25.60it/s][A
+DDIM Sampler:  82%|████████▎ | 165/200 [00:06<00:01, 25.58it/s][A
+DDIM Sampler:  84%|████████▍ | 168/200 [00:06<00:01, 25.54it/s][A
+DDIM Sampler:  86%|████████▌ | 171/200 [00:06<00:01, 25.56it/s][A
+DDIM Sampler:  87%|████████▋ | 174/200 [00:06<00:01, 25.61it/s][A
+DDIM Sampler:  88%|████████▊ | 177/200 [00:06<00:00, 25.64it/s][A
+DDIM Sampler:  90%|█████████ | 180/200 [00:07<00:00, 25.62it/s][A
+DDIM Sampler:  92%|█████████▏| 183/200 [00:07<00:00, 25.58it/s][A
+DDIM Sampler:  93%|█████████▎| 186/200 [00:07<00:00, 25.57it/s][A
+DDIM Sampler:  94%|█████████▍| 189/200 [00:07<00:00, 25.49it/s][A
+DDIM Sampler:  96%|█████████▌| 192/200 [00:07<00:00, 25.27it/s][A
+DDIM Sampler:  98%|█████████▊| 195/200 [00:07<00:00, 25.13it/s][A
+DDIM Sampler:  99%|█████████▉| 198/200 [00:07<00:00, 25.29it/s][ADDIM Sampler: 100%|██████████| 200/200 [00:07<00:00, 25.35it/s]
+
+Progressive Generation:   0%|          | 0/1000 [00:00<?, ?it/s][A
+Progressive Generation:   0%|          | 3/1000 [00:00<00:38, 25.63it/s][A
+Progressive Generation:   1%|          | 6/1000 [00:00<00:38, 25.89it/s][A
+Progressive Generation:   1%|          | 9/1000 [00:00<00:38, 25.88it/s][A
+Progressive Generation:   1%|          | 12/1000 [00:00<00:37, 26.32it/s][A
+Progressive Generation:   2%|▏         | 15/1000 [00:00<00:37, 26.50it/s][A
+Progressive Generation:   2%|▏         | 18/1000 [00:00<00:37, 26.52it/s][A
+Progressive Generation:   2%|▏         | 21/1000 [00:00<00:36, 26.69it/s][A
+Progressive Generation:   2%|▏         | 24/1000 [00:00<00:36, 26.77it/s][A
+Progressive Generation:   3%|▎         | 27/1000 [00:01<00:36, 26.83it/s][A
+Progressive Generation:   3%|▎         | 30/1000 [00:01<00:36, 26.84it/s][A
+Progressive Generation:   3%|▎         | 33/1000 [00:01<00:36, 26.78it/s][A
+Progressive Generation:   4%|▎         | 36/1000 [00:01<00:35, 26.87it/s][A
+Progressive Generation:   4%|▍         | 39/1000 [00:01<00:35, 26.88it/s][A
+Progressive Generation:   4%|▍         | 42/1000 [00:01<00:35, 26.90it/s][A
+Progressive Generation:   4%|▍         | 45/1000 [00:01<00:35, 26.82it/s][A
+Progressive Generation:   5%|▍         | 48/1000 [00:01<00:35, 26.75it/s][A
+Progressive Generation:   5%|▌         | 51/1000 [00:01<00:35, 26.78it/s][A
+Progressive Generation:   5%|▌         | 54/1000 [00:02<00:35, 26.81it/s][A
+Progressive Generation:   6%|▌         | 57/1000 [00:02<00:35, 26.87it/s][A
+Progressive Generation:   6%|▌         | 60/1000 [00:02<00:35, 26.83it/s][A
+Progressive Generation:   6%|▋         | 63/1000 [00:02<00:34, 26.85it/s][A
+Progressive Generation:   7%|▋         | 66/1000 [00:02<00:34, 26.84it/s][A
+Progressive Generation:   7%|▋         | 69/1000 [00:02<00:34, 26.87it/s][A
+Progressive Generation:   7%|▋         | 72/1000 [00:02<00:34, 26.93it/s][A
+Progressive Generation:   8%|▊         | 75/1000 [00:02<00:34, 26.91it/s][A
+Progressive Generation:   8%|▊         | 78/1000 [00:02<00:34, 26.79it/s][A
+Progressive Generation:   8%|▊         | 81/1000 [00:03<00:34, 26.62it/s][A
+Progressive Generation:   8%|▊         | 84/1000 [00:03<00:34, 26.48it/s][A
+Progressive Generation:   9%|▊         | 87/1000 [00:03<00:34, 26.59it/s][A
+Progressive Generation:   9%|▉         | 90/1000 [00:03<00:34, 26.69it/s][A
+Progressive Generation:   9%|▉         | 93/1000 [00:03<00:33, 26.77it/s][A
+Progressive Generation:  10%|▉         | 96/1000 [00:03<00:33, 26.82it/s][A
+Progressive Generation:  10%|▉         | 99/1000 [00:03<00:33, 26.82it/s][A
+Progressive Generation:  10%|█         | 102/1000 [00:03<00:33, 26.87it/s][A
+Progressive Generation:  10%|█         | 105/1000 [00:03<00:33, 26.86it/s][A
+Progressive Generation:  11%|█         | 108/1000 [00:04<00:33, 26.91it/s][A
+Progressive Generation:  11%|█         | 111/1000 [00:04<00:33, 26.76it/s][A
+Progressive Generation:  11%|█▏        | 114/1000 [00:04<00:33, 26.68it/s][A
+Progressive Generation:  12%|█▏        | 117/1000 [00:04<00:33, 26.68it/s][A
+Progressive Generation:  12%|█▏        | 120/1000 [00:04<00:32, 26.77it/s][A
+Progressive Generation:  12%|█▏        | 123/1000 [00:04<00:32, 26.81it/s][A
+Progressive Generation:  13%|█▎        | 126/1000 [00:04<00:32, 26.88it/s][A
+Progressive Generation:  13%|█▎        | 129/1000 [00:04<00:32, 26.91it/s][A
+Progressive Generation:  13%|█▎        | 132/1000 [00:04<00:32, 26.93it/s][A
+Progressive Generation:  14%|█▎        | 135/1000 [00:05<00:32, 26.82it/s][A
+Progressive Generation:  14%|█▍        | 138/1000 [00:05<00:32, 26.87it/s][A
+Progressive Generation:  14%|█▍        | 141/1000 [00:05<00:31, 26.89it/s][A
+Progressive Generation:  14%|█▍        | 144/1000 [00:05<00:31, 26.82it/s][A
+Progressive Generation:  15%|█▍        | 147/1000 [00:05<00:31, 26.90it/s][A
+Progressive Generation:  15%|█▌        | 150/1000 [00:05<00:31, 26.89it/s][A
+Progressive Generation:  15%|█▌        | 153/1000 [00:05<00:31, 26.69it/s][A
+Progressive Generation:  16%|█▌        | 156/1000 [00:05<00:31, 26.51it/s][A
+Progressive Generation:  16%|█▌        | 159/1000 [00:05<00:31, 26.34it/s][A
+Progressive Generation:  16%|█▌        | 162/1000 [00:06<00:31, 26.53it/s][A
+Progressive Generation:  16%|█▋        | 165/1000 [00:06<00:31, 26.66it/s][A
+Progressive Generation:  17%|█▋        | 168/1000 [00:06<00:31, 26.57it/s][A
+Progressive Generation:  17%|█▋        | 171/1000 [00:06<00:31, 26.46it/s][A
+Progressive Generation:  17%|█▋        | 174/1000 [00:06<00:31, 26.40it/s][A
+Progressive Generation:  18%|█▊        | 177/1000 [00:06<00:31, 26.42it/s][A
+Progressive Generation:  18%|█▊        | 180/1000 [00:06<00:30, 26.60it/s][A
+Progressive Generation:  18%|█▊        | 183/1000 [00:06<00:30, 26.61it/s][A
+Progressive Generation:  19%|█▊        | 186/1000 [00:06<00:30, 26.72it/s][A
+Progressive Generation:  19%|█▉        | 189/1000 [00:07<00:30, 26.83it/s][A
+Progressive Generation:  19%|█▉        | 192/1000 [00:07<00:30, 26.68it/s][A
+Progressive Generation:  20%|█▉        | 195/1000 [00:07<00:30, 26.78it/s][A
+Progressive Generation:  20%|█▉        | 198/1000 [00:07<00:29, 26.79it/s][A
+Progressive Generation:  20%|██        | 201/1000 [00:07<00:29, 26.86it/s][A
+Progressive Generation:  20%|██        | 204/1000 [00:07<00:29, 26.89it/s][A
+Progressive Generation:  21%|██        | 207/1000 [00:07<00:29, 26.87it/s][A
+Progressive Generation:  21%|██        | 210/1000 [00:07<00:29, 26.93it/s][A
+Progressive Generation:  21%|██▏       | 213/1000 [00:07<00:29, 26.95it/s][A
+Progressive Generation:  22%|██▏       | 216/1000 [00:08<00:29, 26.94it/s][A
+Progressive Generation:  22%|██▏       | 219/1000 [00:08<00:28, 26.96it/s][A
+Progressive Generation:  22%|██▏       | 222/1000 [00:08<00:28, 27.00it/s][A
+Progressive Generation:  22%|██▎       | 225/1000 [00:08<00:28, 26.97it/s][A
+Progressive Generation:  23%|██▎       | 228/1000 [00:08<00:29, 26.57it/s][A
+Progressive Generation:  23%|██▎       | 231/1000 [00:08<00:28, 26.70it/s][A
+Progressive Generation:  23%|██▎       | 234/1000 [00:08<00:28, 26.80it/s][A
+Progressive Generation:  24%|██▎       | 237/1000 [00:08<00:28, 26.87it/s][A
+Progressive Generation:  24%|██▍       | 240/1000 [00:08<00:28, 26.92it/s][A
+Progressive Generation:  24%|██▍       | 243/1000 [00:09<00:28, 26.91it/s][A
+Progressive Generation:  25%|██▍       | 246/1000 [00:09<00:28, 26.93it/s][A
+Progressive Generation:  25%|██▍       | 249/1000 [00:09<00:27, 26.93it/s][A
+Progressive Generation:  25%|██▌       | 252/1000 [00:09<00:27, 26.97it/s][A
+Progressive Generation:  26%|██▌       | 255/1000 [00:09<00:27, 26.96it/s][A
+Progressive Generation:  26%|██▌       | 258/1000 [00:09<00:27, 26.97it/s][A
+Progressive Generation:  26%|██▌       | 261/1000 [00:09<00:27, 26.95it/s][A
+Progressive Generation:  26%|██▋       | 264/1000 [00:09<00:27, 26.82it/s][A
+Progressive Generation:  27%|██▋       | 267/1000 [00:09<00:27, 26.58it/s][A
+Progressive Generation:  27%|██▋       | 270/1000 [00:10<00:27, 26.45it/s][A
+Progressive Generation:  27%|██▋       | 273/1000 [00:10<00:27, 26.48it/s][A
+Progressive Generation:  28%|██▊       | 276/1000 [00:10<00:27, 26.40it/s][A
+Progressive Generation:  28%|██▊       | 279/1000 [00:10<00:27, 26.31it/s][A
+Progressive Generation:  28%|██▊       | 282/1000 [00:10<00:27, 26.32it/s][A
+Progressive Generation:  28%|██▊       | 285/1000 [00:10<00:26, 26.52it/s][A
+Progressive Generation:  29%|██▉       | 288/1000 [00:10<00:26, 26.66it/s][A
+Progressive Generation:  29%|██▉       | 291/1000 [00:10<00:26, 26.74it/s][A
+Progressive Generation:  29%|██▉       | 294/1000 [00:10<00:26, 26.80it/s][A
+Progressive Generation:  30%|██▉       | 297/1000 [00:11<00:26, 26.82it/s][A
+Progressive Generation:  30%|███       | 300/1000 [00:11<00:26, 26.90it/s][A
+Progressive Generation:  30%|███       | 303/1000 [00:11<00:26, 26.79it/s][A
+Progressive Generation:  31%|███       | 306/1000 [00:11<00:25, 26.82it/s][A
+Progressive Generation:  31%|███       | 309/1000 [00:11<00:25, 26.88it/s][A
+Progressive Generation:  31%|███       | 312/1000 [00:11<00:25, 26.92it/s][A
+Progressive Generation:  32%|███▏      | 315/1000 [00:11<00:25, 26.95it/s][A
+Progressive Generation:  32%|███▏      | 318/1000 [00:11<00:25, 26.86it/s][A
+Progressive Generation:  32%|███▏      | 321/1000 [00:11<00:25, 26.92it/s][A
+Progressive Generation:  32%|███▏      | 324/1000 [00:12<00:25, 26.91it/s][A
+Progressive Generation:  33%|███▎      | 327/1000 [00:12<00:25, 26.89it/s][A
+Progressive Generation:  33%|███▎      | 330/1000 [00:12<00:24, 26.93it/s][A
+Progressive Generation:  33%|███▎      | 333/1000 [00:12<00:24, 26.92it/s][A
+Progressive Generation:  34%|███▎      | 336/1000 [00:12<00:24, 26.98it/s][A
+Progressive Generation:  34%|███▍      | 339/1000 [00:12<00:24, 26.95it/s][A
+Progressive Generation:  34%|███▍      | 342/1000 [00:12<00:24, 26.97it/s][A
+Progressive Generation:  34%|███▍      | 345/1000 [00:12<00:24, 27.00it/s][A
+Progressive Generation:  35%|███▍      | 348/1000 [00:13<00:24, 26.86it/s][A
+Progressive Generation:  35%|███▌      | 351/1000 [00:13<00:24, 26.67it/s][A
+Progressive Generation:  35%|███▌      | 354/1000 [00:13<00:24, 26.66it/s][A
+Progressive Generation:  36%|███▌      | 357/1000 [00:13<00:24, 26.60it/s][A
+Progressive Generation:  36%|███▌      | 360/1000 [00:13<00:23, 26.73it/s][A
+Progressive Generation:  36%|███▋      | 363/1000 [00:13<00:23, 26.67it/s][A
+Progressive Generation:  37%|███▋      | 366/1000 [00:13<00:23, 26.66it/s][A
+Progressive Generation:  37%|███▋      | 369/1000 [00:13<00:23, 26.75it/s][A
+Progressive Generation:  37%|███▋      | 372/1000 [00:13<00:23, 26.77it/s][A
+Progressive Generation:  38%|███▊      | 375/1000 [00:14<00:23, 26.84it/s][A
+Progressive Generation:  38%|███▊      | 378/1000 [00:14<00:23, 26.78it/s][A
+Progressive Generation:  38%|███▊      | 381/1000 [00:14<00:23, 26.82it/s][A
+Progressive Generation:  38%|███▊      | 384/1000 [00:14<00:22, 26.83it/s][A
+Progressive Generation:  39%|███▊      | 387/1000 [00:14<00:22, 26.85it/s][A
+Progressive Generation:  39%|███▉      | 390/1000 [00:14<00:22, 26.93it/s][A
+Progressive Generation:  39%|███▉      | 393/1000 [00:14<00:22, 26.95it/s][A
+Progressive Generation:  40%|███▉      | 396/1000 [00:14<00:22, 26.91it/s][A
+Progressive Generation:  40%|███▉      | 399/1000 [00:14<00:22, 26.83it/s][A
+Progressive Generation:  40%|████      | 402/1000 [00:15<00:22, 26.88it/s][A
+Progressive Generation:  40%|████      | 405/1000 [00:15<00:22, 26.93it/s][A
+Progressive Generation:  41%|████      | 408/1000 [00:15<00:22, 26.88it/s][A
+Progressive Generation:  41%|████      | 411/1000 [00:15<00:21, 26.93it/s][A
+Progressive Generation:  41%|████▏     | 414/1000 [00:15<00:21, 26.92it/s][A
+Progressive Generation:  42%|████▏     | 417/1000 [00:15<00:21, 26.97it/s][A
+Progressive Generation:  42%|████▏     | 420/1000 [00:15<00:21, 26.95it/s][A
+Progressive Generation:  42%|████▏     | 423/1000 [00:15<00:21, 26.98it/s][A
+Progressive Generation:  43%|████▎     | 426/1000 [00:15<00:21, 27.00it/s][A
+Progressive Generation:  43%|████▎     | 429/1000 [00:16<00:21, 26.96it/s][A
+Progressive Generation:  43%|████▎     | 432/1000 [00:16<00:21, 26.99it/s][A
+Progressive Generation:  44%|████▎     | 435/1000 [00:16<00:21, 26.89it/s][A
+Progressive Generation:  44%|████▍     | 438/1000 [00:16<00:20, 26.89it/s][A
+Progressive Generation:  44%|████▍     | 441/1000 [00:16<00:20, 26.90it/s][A
+Progressive Generation:  44%|████▍     | 444/1000 [00:16<00:20, 26.84it/s][A
+Progressive Generation:  45%|████▍     | 447/1000 [00:16<00:20, 26.90it/s][A
+Progressive Generation:  45%|████▌     | 450/1000 [00:16<00:20, 26.95it/s][A
+Progressive Generation:  45%|████▌     | 453/1000 [00:16<00:20, 26.97it/s][A
+Progressive Generation:  46%|████▌     | 456/1000 [00:17<00:20, 26.83it/s][A
+Progressive Generation:  46%|████▌     | 459/1000 [00:17<00:20, 26.91it/s][A
+Progressive Generation:  46%|████▌     | 462/1000 [00:17<00:19, 26.93it/s][A
+Progressive Generation:  46%|████▋     | 465/1000 [00:17<00:19, 26.96it/s][A
+Progressive Generation:  47%|████▋     | 468/1000 [00:17<00:19, 26.97it/s][A
+Progressive Generation:  47%|████▋     | 471/1000 [00:17<00:19, 27.00it/s][A
+Progressive Generation:  47%|████▋     | 474/1000 [00:17<00:19, 27.01it/s][A
+Progressive Generation:  48%|████▊     | 477/1000 [00:17<00:19, 26.97it/s][A
+Progressive Generation:  48%|████▊     | 480/1000 [00:17<00:19, 26.78it/s][A
+Progressive Generation:  48%|████▊     | 483/1000 [00:18<00:19, 26.56it/s][A
+Progressive Generation:  49%|████▊     | 486/1000 [00:18<00:19, 26.40it/s][A
+Progressive Generation:  49%|████▉     | 489/1000 [00:18<00:19, 26.60it/s][A
+Progressive Generation:  49%|████▉     | 492/1000 [00:18<00:19, 26.73it/s][A
+Progressive Generation:  50%|████▉     | 495/1000 [00:18<00:18, 26.79it/s][A
+Progressive Generation:  50%|████▉     | 498/1000 [00:18<00:18, 26.76it/s][A
+Progressive Generation:  50%|█████     | 501/1000 [00:18<00:18, 26.80it/s][A
+Progressive Generation:  50%|█████     | 504/1000 [00:18<00:18, 26.88it/s][A
+Progressive Generation:  51%|█████     | 507/1000 [00:18<00:18, 26.89it/s][A
+Progressive Generation:  51%|█████     | 510/1000 [00:19<00:18, 26.89it/s][A
+Progressive Generation:  51%|█████▏    | 513/1000 [00:19<00:18, 26.92it/s][A
+Progressive Generation:  52%|█████▏    | 516/1000 [00:19<00:17, 26.92it/s][A
+Progressive Generation:  52%|█████▏    | 519/1000 [00:19<00:17, 26.93it/s][A
+Progressive Generation:  52%|█████▏    | 522/1000 [00:19<00:17, 26.83it/s][A
+Progressive Generation:  52%|█████▎    | 525/1000 [00:19<00:17, 26.91it/s][A
+Progressive Generation:  53%|█████▎    | 528/1000 [00:19<00:17, 26.91it/s][A
+Progressive Generation:  53%|█████▎    | 531/1000 [00:19<00:17, 26.86it/s][A
+Progressive Generation:  53%|█████▎    | 534/1000 [00:19<00:17, 26.85it/s][A
+Progressive Generation:  54%|█████▎    | 537/1000 [00:20<00:17, 26.76it/s][A
+Progressive Generation:  54%|█████▍    | 540/1000 [00:20<00:17, 26.82it/s][A
+Progressive Generation:  54%|█████▍    | 543/1000 [00:20<00:17, 26.82it/s][A
+Progressive Generation:  55%|█████▍    | 546/1000 [00:20<00:16, 26.85it/s][A
+Progressive Generation:  55%|█████▍    | 549/1000 [00:20<00:16, 26.80it/s][A
+Progressive Generation:  55%|█████▌    | 552/1000 [00:20<00:16, 26.74it/s][A
+Progressive Generation:  56%|█████▌    | 555/1000 [00:20<00:16, 26.77it/s][A
+Progressive Generation:  56%|█████▌    | 558/1000 [00:20<00:16, 26.77it/s][A
+Progressive Generation:  56%|█████▌    | 561/1000 [00:20<00:16, 26.81it/s][A
+Progressive Generation:  56%|█████▋    | 564/1000 [00:21<00:16, 26.87it/s][A
+Progressive Generation:  57%|█████▋    | 567/1000 [00:21<00:16, 26.67it/s][A
+Progressive Generation:  57%|█████▋    | 570/1000 [00:21<00:16, 26.55it/s][A
+Progressive Generation:  57%|█████▋    | 573/1000 [00:21<00:16, 26.46it/s][A
+Progressive Generation:  58%|█████▊    | 576/1000 [00:21<00:16, 26.32it/s][A
+Progressive Generation:  58%|█████▊    | 579/1000 [00:21<00:15, 26.33it/s][A
+Progressive Generation:  58%|█████▊    | 582/1000 [00:21<00:15, 26.54it/s][A
+Progressive Generation:  58%|█████▊    | 585/1000 [00:21<00:15, 26.67it/s][A
+Progressive Generation:  59%|█████▉    | 588/1000 [00:21<00:15, 26.76it/s][A
+Progressive Generation:  59%|█████▉    | 591/1000 [00:22<00:15, 26.83it/s][A
+Progressive Generation:  59%|█████▉    | 594/1000 [00:22<00:15, 26.76it/s][A
+Progressive Generation:  60%|█████▉    | 597/1000 [00:22<00:15, 26.84it/s][A
+Progressive Generation:  60%|██████    | 600/1000 [00:22<00:14, 26.86it/s][A
+Progressive Generation:  60%|██████    | 603/1000 [00:22<00:14, 26.92it/s][A
+Progressive Generation:  61%|██████    | 606/1000 [00:22<00:14, 26.87it/s][A
+Progressive Generation:  61%|██████    | 609/1000 [00:22<00:14, 26.83it/s][A
+Progressive Generation:  61%|██████    | 612/1000 [00:22<00:14, 26.73it/s][A
+Progressive Generation:  62%|██████▏   | 615/1000 [00:22<00:14, 26.79it/s][A
+Progressive Generation:  62%|██████▏   | 618/1000 [00:23<00:14, 26.88it/s][A
+Progressive Generation:  62%|██████▏   | 621/1000 [00:23<00:14, 26.89it/s][A
+Progressive Generation:  62%|██████▏   | 624/1000 [00:23<00:13, 26.89it/s][A
+Progressive Generation:  63%|██████▎   | 627/1000 [00:23<00:13, 26.93it/s][A
+Progressive Generation:  63%|██████▎   | 630/1000 [00:23<00:13, 26.95it/s][A
+Progressive Generation:  63%|██████▎   | 633/1000 [00:23<00:13, 26.92it/s][A
+Progressive Generation:  64%|██████▎   | 636/1000 [00:23<00:13, 26.87it/s][A
+Progressive Generation:  64%|██████▍   | 639/1000 [00:23<00:13, 26.92it/s][A
+Progressive Generation:  64%|██████▍   | 642/1000 [00:23<00:13, 26.91it/s][A
+Progressive Generation:  64%|██████▍   | 645/1000 [00:24<00:13, 26.95it/s][A
+Progressive Generation:  65%|██████▍   | 648/1000 [00:24<00:13, 26.96it/s][A
+Progressive Generation:  65%|██████▌   | 651/1000 [00:24<00:12, 26.96it/s][A
+Progressive Generation:  65%|██████▌   | 654/1000 [00:24<00:12, 26.96it/s][A
+Progressive Generation:  66%|██████▌   | 657/1000 [00:24<00:12, 26.96it/s][A
+Progressive Generation:  66%|██████▌   | 660/1000 [00:24<00:12, 26.98it/s][A
+Progressive Generation:  66%|██████▋   | 663/1000 [00:24<00:12, 26.97it/s][A
+Progressive Generation:  67%|██████▋   | 666/1000 [00:24<00:12, 26.99it/s][A
+Progressive Generation:  67%|██████▋   | 669/1000 [00:24<00:12, 26.99it/s][A
+Progressive Generation:  67%|██████▋   | 672/1000 [00:25<00:12, 26.99it/s][A
+Progressive Generation:  68%|██████▊   | 675/1000 [00:25<00:12, 26.96it/s][A
+Progressive Generation:  68%|██████▊   | 678/1000 [00:25<00:11, 26.98it/s][A
+Progressive Generation:  68%|██████▊   | 681/1000 [00:25<00:11, 26.80it/s][A
+Progressive Generation:  68%|██████▊   | 684/1000 [00:25<00:11, 26.62it/s][A
+Progressive Generation:  69%|██████▊   | 687/1000 [00:25<00:11, 26.43it/s][A
+Progressive Generation:  69%|██████▉   | 690/1000 [00:25<00:11, 26.36it/s][A
+Progressive Generation:  69%|██████▉   | 693/1000 [00:25<00:11, 26.41it/s][A
+Progressive Generation:  70%|██████▉   | 696/1000 [00:25<00:11, 26.56it/s][A
+Progressive Generation:  70%|██████▉   | 699/1000 [00:26<00:11, 26.71it/s][A
+Progressive Generation:  70%|███████   | 702/1000 [00:26<00:11, 26.78it/s][A
+Progressive Generation:  70%|███████   | 705/1000 [00:26<00:10, 26.84it/s][A
+Progressive Generation:  71%|███████   | 708/1000 [00:26<00:10, 26.81it/s][A
+Progressive Generation:  71%|███████   | 711/1000 [00:26<00:10, 26.83it/s][A
+Progressive Generation:  71%|███████▏  | 714/1000 [00:26<00:10, 26.89it/s][A
+Progressive Generation:  72%|███████▏  | 717/1000 [00:26<00:10, 26.92it/s][A
+Progressive Generation:  72%|███████▏  | 720/1000 [00:26<00:10, 26.97it/s][A
+Progressive Generation:  72%|███████▏  | 723/1000 [00:26<00:10, 26.98it/s][A
+Progressive Generation:  73%|███████▎  | 726/1000 [00:27<00:10, 26.98it/s][A
+Progressive Generation:  73%|███████▎  | 729/1000 [00:27<00:10, 26.98it/s][A
+Progressive Generation:  73%|███████▎  | 732/1000 [00:27<00:09, 26.92it/s][A
+Progressive Generation:  74%|███████▎  | 735/1000 [00:27<00:09, 26.94it/s][A
+Progressive Generation:  74%|███████▍  | 738/1000 [00:27<00:09, 26.94it/s][A
+Progressive Generation:  74%|███████▍  | 741/1000 [00:27<00:09, 26.99it/s][A
+Progressive Generation:  74%|███████▍  | 744/1000 [00:27<00:09, 26.92it/s][A
+Progressive Generation:  75%|███████▍  | 747/1000 [00:27<00:09, 26.69it/s][A
+Progressive Generation:  75%|███████▌  | 750/1000 [00:27<00:09, 26.53it/s][A
+Progressive Generation:  75%|███████▌  | 753/1000 [00:28<00:09, 26.40it/s][A
+Progressive Generation:  76%|███████▌  | 756/1000 [00:28<00:09, 26.29it/s][A
+Progressive Generation:  76%|███████▌  | 759/1000 [00:28<00:09, 26.34it/s][A
+Progressive Generation:  76%|███████▌  | 762/1000 [00:28<00:08, 26.53it/s][A
+Progressive Generation:  76%|███████▋  | 765/1000 [00:28<00:08, 26.69it/s][A
+Progressive Generation:  77%|███████▋  | 768/1000 [00:28<00:08, 26.72it/s][A
+Progressive Generation:  77%|███████▋  | 771/1000 [00:28<00:08, 26.77it/s][A
+Progressive Generation:  77%|███████▋  | 774/1000 [00:28<00:08, 26.85it/s][A
+Progressive Generation:  78%|███████▊  | 777/1000 [00:29<00:08, 26.85it/s][A
+Progressive Generation:  78%|███████▊  | 780/1000 [00:29<00:08, 26.90it/s][A
+Progressive Generation:  78%|███████▊  | 783/1000 [00:29<00:08, 26.95it/s][A
+Progressive Generation:  79%|███████▊  | 786/1000 [00:29<00:07, 26.97it/s][A
+Progressive Generation:  79%|███████▉  | 789/1000 [00:29<00:07, 26.88it/s][A
+Progressive Generation:  79%|███████▉  | 792/1000 [00:29<00:07, 26.88it/s][A
+Progressive Generation:  80%|███████▉  | 795/1000 [00:29<00:07, 26.90it/s][A
+Progressive Generation:  80%|███████▉  | 798/1000 [00:29<00:07, 26.93it/s][A
+Progressive Generation:  80%|████████  | 801/1000 [00:29<00:07, 26.96it/s][A
+Progressive Generation:  80%|████████  | 804/1000 [00:30<00:07, 27.00it/s][A
+Progressive Generation:  81%|████████  | 807/1000 [00:30<00:07, 26.91it/s][A
+Progressive Generation:  81%|████████  | 810/1000 [00:30<00:07, 26.94it/s][A
+Progressive Generation:  81%|████████▏ | 813/1000 [00:30<00:06, 26.93it/s][A
+Progressive Generation:  82%|████████▏ | 816/1000 [00:30<00:06, 26.98it/s][A
+Progressive Generation:  82%|████████▏ | 819/1000 [00:30<00:06, 27.00it/s][A
+Progressive Generation:  82%|████████▏ | 822/1000 [00:30<00:06, 27.04it/s][A
+Progressive Generation:  82%|████████▎ | 825/1000 [00:30<00:06, 26.86it/s][A
+Progressive Generation:  83%|████████▎ | 828/1000 [00:30<00:06, 26.86it/s][A
+Progressive Generation:  83%|████████▎ | 831/1000 [00:31<00:06, 26.95it/s][A
+Progressive Generation:  83%|████████▎ | 834/1000 [00:31<00:06, 26.91it/s][A
+Progressive Generation:  84%|████████▎ | 837/1000 [00:31<00:06, 26.88it/s][A
+Progressive Generation:  84%|████████▍ | 840/1000 [00:31<00:05, 26.91it/s][A
+Progressive Generation:  84%|████████▍ | 843/1000 [00:31<00:05, 26.96it/s][A
+Progressive Generation:  85%|████████▍ | 846/1000 [00:31<00:05, 26.98it/s][A
+Progressive Generation:  85%|████████▍ | 849/1000 [00:31<00:05, 26.91it/s][A
+Progressive Generation:  85%|████████▌ | 852/1000 [00:31<00:05, 26.88it/s][A
+Progressive Generation:  86%|████████▌ | 855/1000 [00:31<00:05, 26.84it/s][A
+Progressive Generation:  86%|████████▌ | 858/1000 [00:32<00:05, 26.89it/s][A
+Progressive Generation:  86%|████████▌ | 861/1000 [00:32<00:05, 26.90it/s][A
+Progressive Generation:  86%|████████▋ | 864/1000 [00:32<00:05, 26.95it/s][A
+Progressive Generation:  87%|████████▋ | 867/1000 [00:32<00:04, 26.90it/s][A
+Progressive Generation:  87%|████████▋ | 870/1000 [00:32<00:04, 26.88it/s][A
+Progressive Generation:  87%|████████▋ | 873/1000 [00:32<00:04, 26.91it/s][A
+Progressive Generation:  88%|████████▊ | 876/1000 [00:32<00:04, 26.95it/s][A
+Progressive Generation:  88%|████████▊ | 879/1000 [00:32<00:04, 26.86it/s][A
+Progressive Generation:  88%|████████▊ | 882/1000 [00:32<00:04, 26.90it/s][A
+Progressive Generation:  88%|████████▊ | 885/1000 [00:33<00:04, 26.85it/s][A
+Progressive Generation:  89%|████████▉ | 888/1000 [00:33<00:04, 26.82it/s][A
+Progressive Generation:  89%|████████▉ | 891/1000 [00:33<00:04, 26.69it/s][A
+Progressive Generation:  89%|████████▉ | 894/1000 [00:33<00:03, 26.66it/s][A
+Progressive Generation:  90%|████████▉ | 897/1000 [00:33<00:03, 26.68it/s][A
+Progressive Generation:  90%|█████████ | 900/1000 [00:33<00:03, 26.76it/s][A
+Progressive Generation:  90%|█████████ | 903/1000 [00:33<00:03, 26.67it/s][A
+Progressive Generation:  91%|█████████ | 906/1000 [00:33<00:03, 26.67it/s][A
+Progressive Generation:  91%|█████████ | 909/1000 [00:33<00:03, 26.77it/s][A
+Progressive Generation:  91%|█████████ | 912/1000 [00:34<00:03, 26.87it/s][A
+Progressive Generation:  92%|█████████▏| 915/1000 [00:34<00:03, 26.87it/s][A
+Progressive Generation:  92%|█████████▏| 918/1000 [00:34<00:03, 26.80it/s][A
+Progressive Generation:  92%|█████████▏| 921/1000 [00:34<00:02, 26.86it/s][A
+Progressive Generation:  92%|█████████▏| 924/1000 [00:34<00:02, 26.92it/s][A
+Progressive Generation:  93%|█████████▎| 927/1000 [00:34<00:02, 26.95it/s][A
+Progressive Generation:  93%|█████████▎| 930/1000 [00:34<00:02, 26.80it/s][A
+Progressive Generation:  93%|█████████▎| 933/1000 [00:34<00:02, 26.82it/s][A
+Progressive Generation:  94%|█████████▎| 936/1000 [00:34<00:02, 26.81it/s][A
+Progressive Generation:  94%|█████████▍| 939/1000 [00:35<00:02, 26.90it/s][A
+Progressive Generation:  94%|█████████▍| 942/1000 [00:35<00:02, 26.83it/s][A
+Progressive Generation:  94%|█████████▍| 945/1000 [00:35<00:02, 26.76it/s][A
+Progressive Generation:  95%|█████████▍| 948/1000 [00:35<00:01, 26.80it/s][A
+Progressive Generation:  95%|█████████▌| 951/1000 [00:35<00:01, 26.74it/s][A
+Progressive Generation:  95%|█████████▌| 954/1000 [00:35<00:01, 26.70it/s][A
+Progressive Generation:  96%|█████████▌| 957/1000 [00:35<00:01, 26.79it/s][A
+Progressive Generation:  96%|█████████▌| 960/1000 [00:35<00:01, 26.87it/s][A
+Progressive Generation:  96%|█████████▋| 963/1000 [00:35<00:01, 26.90it/s][A
+Progressive Generation:  97%|█████████▋| 966/1000 [00:36<00:01, 26.76it/s][A
+Progressive Generation:  97%|█████████▋| 969/1000 [00:36<00:01, 26.84it/s][A
+Progressive Generation:  97%|█████████▋| 972/1000 [00:36<00:01, 26.87it/s][A
+Progressive Generation:  98%|█████████▊| 975/1000 [00:36<00:00, 26.91it/s][A
+Progressive Generation:  98%|█████████▊| 978/1000 [00:36<00:00, 26.95it/s][A
+Progressive Generation:  98%|█████████▊| 981/1000 [00:36<00:00, 26.84it/s][A
+Progressive Generation:  98%|█████████▊| 984/1000 [00:36<00:00, 26.92it/s][A
+Progressive Generation:  99%|█████████▊| 987/1000 [00:36<00:00, 26.87it/s][A
+Progressive Generation:  99%|█████████▉| 990/1000 [00:36<00:00, 26.93it/s][A
+Progressive Generation:  99%|█████████▉| 993/1000 [00:37<00:00, 26.91it/s][A
+Progressive Generation: 100%|█████████▉| 996/1000 [00:37<00:00, 26.91it/s][A
+Progressive Generation: 100%|█████████▉| 999/1000 [00:37<00:00, 26.91it/s][AProgressive Generation: 100%|██████████| 1000/1000 [00:37<00:00, 26.81it/s]
+
+Progressive Generation:   0%|          | 0/6 [00:00<?, ?it/s][A
+Progressive Generation:  67%|██████▋   | 4/6 [00:00<00:00, 19.82it/s][A
+Progressive Generation: 100%|██████████| 6/6 [00:00<00:00,  9.04it/s][AProgressive Generation: 100%|██████████| 6/6 [00:00<00:00, 10.14it/s]
+Average Epoch time: 1257.98 seconds
+Average Peak memory 28752.19MiB
+Epoch 9, global step 5209: val/loss_simple_ema reached 0.26064 (best 0.24590), saving model to "logs/2024-12-08T18-42-19_lsun_churches-ldm-kl-8/checkpoints/epoch=000009.ckpt" as top 3
+Average Epoch time: 1186.99 seconds
+Average Peak memory 28756.84MiB
+Epoch 10, global step 5730: val/loss_simple_ema reached 0.25600 (best 0.24590), saving model to "logs/2024-12-08T18-42-19_lsun_churches-ldm-kl-8/checkpoints/epoch=000010.ckpt" as top 3
+Average Epoch time: 1187.01 seconds
+Average Peak memory 28753.32MiB
+Epoch 11, global step 6251: val/loss_simple_ema was not in top 3
+Average Epoch time: 1186.10 seconds
+Average Peak memory 28755.72MiB
+Epoch 12, global step 6772: val/loss_simple_ema reached 0.25191 (best 0.24590), saving model to "logs/2024-12-08T18-42-19_lsun_churches-ldm-kl-8/checkpoints/epoch=000012.ckpt" as top 3

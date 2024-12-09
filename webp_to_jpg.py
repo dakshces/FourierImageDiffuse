@@ -2,9 +2,9 @@ import os
 from PIL import Image
 
 # Define the input file containing image paths and the output directory
-input_file = "data/lsun/church_outdoor_val.txt"
-output_dir = "data/lsun/church_val_jpg"
-
+input_file = "data/lsun/bedroom_train.txt" #training txt file
+output_dir = "data/lsun/bedroom_train_jpg" # output directory
+data_dir = "data/lsun/bedroom/"
 # Ensure the output directory exists
 os.makedirs(output_dir, exist_ok=True)
 
@@ -21,7 +21,7 @@ for path in image_paths:
             output_path = os.path.join(output_dir, f"{os.path.splitext(os.path.basename(path))[0]}.jpg")
             
             # Open the WEBP image
-            with Image.open('data/lsun/churches/'+path) as img:
+            with Image.open(data_dir+path) as img:
                 # Resize to 256x256 and convert to RGB
                 img = img.resize((256, 256)).convert("RGB")
                 # Save as JPG

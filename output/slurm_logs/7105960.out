@@ -1,0 +1,129 @@
+Running on GPUs 0,
+LatentDiffusion: Running in eps-prediction mode
+DiffusionWrapper has 294.97 M params.
+Keeping EMAs of 522.
+making attention of type 'vanilla' with 512 in_channels
+Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+making attention of type 'vanilla' with 512 in_channels
+Restored from models/first_stage_models/kl-f8/model.ckpt
+Training LatentDiffusion as an unconditional model.
+Monitoring val/loss_simple_ema as checkpoint metric.
+Merged modelckpt-cfg: 
+{'target': 'pytorch_lightning.callbacks.ModelCheckpoint', 'params': {'dirpath': 'logs/2024-12-08T18-40-24_lsun_churches-ldm-kl-8/checkpoints', 'filename': '{epoch:06}', 'verbose': True, 'save_last': True, 'monitor': 'val/loss_simple_ema', 'save_top_k': 3}}
+#### Data #####
+train, LSUNChurchesTrain, 50000
+validation, LSUNChurchesValidation, 2500
+accumulate_grad_batches = 1
+++++ NOT USING LR SCALING ++++
+Setting learning rate to 5.00e-05
+Setting up LambdaLR scheduler...
+Project config
+model:
+  base_learning_rate: 5.0e-05
+  target: ldm.models.diffusion.ddpm.LatentDiffusion
+  params:
+    linear_start: 0.0015
+    linear_end: 0.0155
+    num_timesteps_cond: 1
+    log_every_t: 200
+    timesteps: 1000
+    loss_type: l1
+    first_stage_key: image
+    cond_stage_key: image
+    image_size: 32
+    channels: 4
+    cond_stage_trainable: false
+    concat_mode: false
+    scale_by_std: true
+    monitor: val/loss_simple_ema
+    scheduler_config:
+      target: ldm.lr_scheduler.LambdaLinearScheduler
+      params:
+        warm_up_steps:
+        - 10000
+        cycle_lengths:
+        - 10000000000000
+        f_start:
+        - 1.0e-06
+        f_max:
+        - 1.0
+        f_min:
+        - 1.0
+    unet_config:
+      target: ldm.modules.diffusionmodules.openaimodel.UNetModel
+      params:
+        image_size: 32
+        in_channels: 4
+        out_channels: 4
+        model_channels: 192
+        attention_resolutions:
+        - 1
+        - 2
+        - 4
+        - 8
+        num_res_blocks: 2
+        channel_mult:
+        - 1
+        - 2
+        - 2
+        - 4
+        - 4
+        num_heads: 8
+        use_scale_shift_norm: true
+        resblock_updown: true
+    first_stage_config:
+      target: ldm.models.autoencoder.AutoencoderKL
+      params:
+        embed_dim: 4
+        monitor: val/rec_loss
+        ckpt_path: models/first_stage_models/kl-f8/model.ckpt
+        ddconfig:
+          double_z: true
+          z_channels: 4
+          resolution: 256
+          in_channels: 3
+          out_ch: 3
+          ch: 128
+          ch_mult:
+          - 1
+          - 2
+          - 4
+          - 4
+          num_res_blocks: 2
+          attn_resolutions: []
+          dropout: 0.0
+        lossconfig:
+          target: torch.nn.Identity
+    cond_stage_config: __is_unconditional__
+data:
+  target: main.DataModuleFromConfig
+  params:
+    batch_size: 96
+    num_workers: 5
+    wrap: false
+    train:
+      target: ldm.data.lsun.LSUNChurchesTrain
+      params:
+        size: 256
+    validation:
+      target: ldm.data.lsun.LSUNChurchesValidation
+      params:
+        size: 256
+
+Lightning config
+callbacks:
+  image_logger:
+    target: main.ImageLogger
+    params:
+      batch_frequency: 5000
+      max_images: 8
+      increase_log_steps: false
+trainer:
+  benchmark: true
+  accelerator: ddp
+  gpus: 0,
+
+Validation sanity check: 0it [00:00, ?it/s]Validation sanity check:   0%|          | 0/2 [00:00<?, ?it/s]Validation sanity check:  50%|█████     | 1/2 [00:13<00:13, 13.87s/it]Validation sanity check: 100%|██████████| 2/2 [00:16<00:00,  7.16s/it]                                                                      Training: -1it [00:00, ?it/s]Training:   0%|          | 0/548 [00:00<00:00, 39945.75it/s]Epoch 0:   0%|          | 0/548 [00:00<00:00, 7667.83it/s]  ### USING STD-RESCALING ###
+setting self.scale_factor to 0.22106924653053284
+### USING STD-RESCALING ###
+Epoch 0:   0%|          | 1/548 [00:10<46:07,  5.06s/it]  Epoch 0:   0%|          | 1/548 [00:10<46:08,  5.06s/it, loss=0.8, v_num=0, train/loss_simple_step=0.800, train/loss_vlb_step=0.00508, train/loss_step=0.800, global_step=0.000, lr_abs=5e-11]Epoch 0:   0%|          | 2/548 [00:12<37:05,  4.08s/it, loss=0.8, v_num=0, train/loss_simple_step=0.800, train/loss_vlb_step=0.00508, train/loss_step=0.800, global_step=0.000, lr_abs=5e-11]Epoch 0:   0%|          | 2/548 [00:12<37:06,  4.08s/it, loss=0.798, v_num=0, train/loss_simple_step=0.796, train/loss_vlb_step=0.00513, train/loss_step=0.796, global_step=1.000, lr_abs=5.05e-9]Epoch 0:   1%|          | 3/548 [00:14<32:32,  3.58s/it, loss=0.798, v_num=0, train/loss_simple_step=0.796, train/loss_vlb_step=0.00513, train/loss_step=0.796, global_step=1.000, lr_abs=5.05e-9]Epoch 0:   1%|          | 3/548 [00:14<32:33,  3.58s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00518, train/loss_step=0.798, global_step=2.000, lr_abs=1e-8]   Epoch 0:   1%|          | 4/548 [00:16<29:43,  3.28s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00518, train/loss_step=0.798, global_step=2.000, lr_abs=1e-8]Epoch 0:   1%|          | 4/548 [00:16<29:43,  3.28s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00564, train/loss_step=0.798, global_step=3.000, lr_abs=1.5e-8]Epoch 0:   1%|          | 5/548 [00:18<27:53,  3.08s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00564, train/loss_step=0.798, global_step=3.000, lr_abs=1.5e-8]Epoch 0:   1%|          | 5/548 [00:18<27:53,  3.08s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00476, train/loss_step=0.798, global_step=4.000, lr_abs=2e-8]  Epoch 0:   1%|          | 6/548 [00:20<26:31,  2.94s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00476, train/loss_step=0.798, global_step=4.000, lr_abs=2e-8]Epoch 0:   1%|          | 6/548 [00:20<26:31,  2.94s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00487, train/loss_step=0.798, global_step=5.000, lr_abs=2.5e-8]Epoch 0:   1%|▏         | 7/548 [00:22<25:32,  2.83s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00487, train/loss_step=0.798, global_step=5.000, lr_abs=2.5e-8]Epoch 0:   1%|▏         | 7/548 [00:22<25:32,  2.83s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00565, train/loss_step=0.798, global_step=6.000, lr_abs=3e-8]  Epoch 0:   1%|▏         | 8/548 [00:24<24:43,  2.75s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00565, train/loss_step=0.798, global_step=6.000, lr_abs=3e-8]Epoch 0:   1%|▏         | 8/548 [00:24<24:43,  2.75s/it, loss=0.798, v_num=0, train/loss_simple_step=0.795, train/loss_vlb_step=0.00651, train/loss_step=0.795, global_step=7.000, lr_abs=3.5e-8]Epoch 0:   2%|▏         | 9/548 [00:26<24:06,  2.68s/it, loss=0.798, v_num=0, train/loss_simple_step=0.795, train/loss_vlb_step=0.00651, train/loss_step=0.795, global_step=7.000, lr_abs=3.5e-8]Epoch 0:   2%|▏         | 9/548 [00:26<24:06,  2.68s/it, loss=0.798, v_num=0, train/loss_simple_step=0.797, train/loss_vlb_step=0.00658, train/loss_step=0.797, global_step=8.000, lr_abs=4e-8]  Epoch 0:   2%|▏         | 10/548 [00:28<23:33,  2.63s/it, loss=0.798, v_num=0, train/loss_simple_step=0.797, train/loss_vlb_step=0.00658, train/loss_step=0.797, global_step=8.000, lr_abs=4e-8]Epoch 0:   2%|▏         | 10/548 [00:28<23:33,  2.63s/it, loss=0.798, v_num=0, train/loss_simple_step=0.799, train/loss_vlb_step=0.00516, train/loss_step=0.799, global_step=9.000, lr_abs=4.5e-8]Epoch 0:   2%|▏         | 11/548 [00:31<23:07,  2.58s/it, loss=0.798, v_num=0, train/loss_simple_step=0.799, train/loss_vlb_step=0.00516, train/loss_step=0.799, global_step=9.000, lr_abs=4.5e-8]Epoch 0:   2%|▏         | 11/548 [00:31<23:07,  2.58s/it, loss=0.798, v_num=0, train/loss_simple_step=0.797, train/loss_vlb_step=0.0059, train/loss_step=0.797, global_step=10.00, lr_abs=5e-8]   Epoch 0:   2%|▏         | 12/548 [00:33<22:43,  2.54s/it, loss=0.798, v_num=0, train/loss_simple_step=0.797, train/loss_vlb_step=0.0059, train/loss_step=0.797, global_step=10.00, lr_abs=5e-8]Epoch 0:   2%|▏         | 12/548 [00:33<22:43,  2.54s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00484, train/loss_step=0.798, global_step=11.00, lr_abs=5.5e-8]Epoch 0:   2%|▏         | 13/548 [00:35<22:24,  2.51s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00484, train/loss_step=0.798, global_step=11.00, lr_abs=5.5e-8]Epoch 0:   2%|▏         | 13/548 [00:35<22:24,  2.51s/it, loss=0.798, v_num=0, train/loss_simple_step=0.797, train/loss_vlb_step=0.00513, train/loss_step=0.797, global_step=12.00, lr_abs=6e-8]  Epoch 0:   3%|▎         | 14/548 [00:37<22:05,  2.48s/it, loss=0.798, v_num=0, train/loss_simple_step=0.797, train/loss_vlb_step=0.00513, train/loss_step=0.797, global_step=12.00, lr_abs=6e-8]Epoch 0:   3%|▎         | 14/548 [00:37<22:05,  2.48s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00486, train/loss_step=0.798, global_step=13.00, lr_abs=6.5e-8]Epoch 0:   3%|▎         | 15/548 [00:39<21:50,  2.46s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00486, train/loss_step=0.798, global_step=13.00, lr_abs=6.5e-8]Epoch 0:   3%|▎         | 15/548 [00:39<21:50,  2.46s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00527, train/loss_step=0.798, global_step=14.00, lr_abs=7e-8]  Epoch 0:   3%|▎         | 16/548 [00:41<21:36,  2.44s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00527, train/loss_step=0.798, global_step=14.00, lr_abs=7e-8]Epoch 0:   3%|▎         | 16/548 [00:41<21:36,  2.44s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.0116, train/loss_step=0.798, global_step=15.00, lr_abs=7.5e-8]Epoch 0:   3%|▎         | 17/548 [00:43<21:24,  2.42s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.0116, train/loss_step=0.798, global_step=15.00, lr_abs=7.5e-8]Epoch 0:   3%|▎         | 17/548 [00:43<21:24,  2.42s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00493, train/loss_step=0.798, global_step=16.00, lr_abs=8e-8] Epoch 0:   3%|▎         | 18/548 [00:45<21:11,  2.40s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00493, train/loss_step=0.798, global_step=16.00, lr_abs=8e-8]Epoch 0:   3%|▎         | 18/548 [00:45<21:11,  2.40s/it, loss=0.798, v_num=0, train/loss_simple_step=0.800, train/loss_vlb_step=0.00703, train/loss_step=0.800, global_step=17.00, lr_abs=8.5e-8]Epoch 0:   3%|▎         | 19/548 [00:47<21:01,  2.39s/it, loss=0.798, v_num=0, train/loss_simple_step=0.800, train/loss_vlb_step=0.00703, train/loss_step=0.800, global_step=17.00, lr_abs=8.5e-8]Epoch 0:   3%|▎         | 19/548 [00:47<21:01,  2.39s/it, loss=0.798, v_num=0, train/loss_simple_step=0.800, train/loss_vlb_step=0.00557, train/loss_step=0.800, global_step=18.00, lr_abs=9e-8]  Epoch 0:   4%|▎         | 20/548 [00:49<20:51,  2.37s/it, loss=0.798, v_num=0, train/loss_simple_step=0.800, train/loss_vlb_step=0.00557, train/loss_step=0.800, global_step=18.00, lr_abs=9e-8]Epoch 0:   4%|▎         | 20/548 [00:49<20:51,  2.37s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00468, train/loss_step=0.798, global_step=19.00, lr_abs=9.5e-8]Epoch 0:   4%|▍         | 21/548 [00:51<20:43,  2.36s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00468, train/loss_step=0.798, global_step=19.00, lr_abs=9.5e-8]Epoch 0:   4%|▍         | 21/548 [00:51<20:43,  2.36s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00537, train/loss_step=0.798, global_step=20.00, lr_abs=1e-7]  Epoch 0:   4%|▍         | 22/548 [00:53<20:34,  2.35s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00537, train/loss_step=0.798, global_step=20.00, lr_abs=1e-7]Epoch 0:   4%|▍         | 22/548 [00:53<20:34,  2.35s/it, loss=0.798, v_num=0, train/loss_simple_step=0.798, train/loss_vlb_step=0.00912, train/loss_step=0.798, global_step=21.00, lr_abs=1.05e-7]

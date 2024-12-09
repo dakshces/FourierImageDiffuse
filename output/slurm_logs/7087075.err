@@ -5610,3 +5610,16 @@ Epoch 27, global step 29175: val/loss_simple_ema was not in top 3
 Average Epoch time: 2732.31 seconds
 Average Peak memory 27942.98MiB
 Epoch 28, global step 30217: val/loss_simple_ema was not in top 3
+Average Epoch time: 2581.28 seconds
+Average Peak memory 27943.74MiB
+Epoch 29, global step 31259: val/loss_simple_ema was not in top 3
+Average Epoch time: 2581.76 seconds
+Average Peak memory 27935.34MiB
+Epoch 30, global step 32301: val/loss_simple_ema was not in top 3
+Average Epoch time: 2582.39 seconds
+Average Peak memory 27943.69MiB
+Epoch 31, global step 33343: val/loss_simple_ema was not in top 3
+Average Epoch time: 2579.60 seconds
+Average Peak memory 27936.29MiB
+Epoch 32, global step 34385: val/loss_simple_ema was not in top 3
+slurmstepd: error: *** JOB 7087075 ON gpu1503 CANCELLED AT 2024-12-08T18:38:13 DUE TO TIME LIMIT ***
