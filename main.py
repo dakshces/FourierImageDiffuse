@@ -655,10 +655,14 @@ if __name__ == "__main__":
             del callbacks_cfg['ignore_keys_callback']
 
         trainer_kwargs["callbacks"] = [instantiate_from_config(callbacks_cfg[k]) for k in callbacks_cfg]
-
-        trainer = Trainer.from_argparse_args(trainer_opt, **trainer_kwargs)
-        trainer.logdir = logdir  ###
-
+        
+        try:
+            trainer = Trainer.from_argparse_args(trainer_opt, **trainer_kwargs)
+            trainer.logdir = logdir  ###
+        except Exception as e:
+            print(f"Error initializing trainer: {e}")
+            trainer = None
+        
         # data
         data = instantiate_from_config(config.data)
         # NOTE according to https://pytorch-lightning.readthedocs.io/en/latest/datamodules.html
@@ -737,5 +741,6 @@ if __name__ == "__main__":
             dst = os.path.join(dst, "debug_runs", name)
             os.makedirs(os.path.split(dst)[0], exist_ok=True)
             os.rename(logdir, dst)
-        if trainer.global_rank == 0:
-            print(trainer.profiler.summary())
+        if trainer is not None:
+            if trainer.global_rank == 0:
+                print(trainer.profiler.summary())

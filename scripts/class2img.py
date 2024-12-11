@@ -39,7 +39,7 @@ if __name__ == "__main__":
         type=str,
         nargs="?",
         help="dir to write results to",
-        default="outputs/txt2img-samples"
+        default="outputs/class2img-samples"
     )
     parser.add_argument(
         "--ddim_steps",
@@ -90,10 +90,13 @@ if __name__ == "__main__":
     )
     opt = parser.parse_args()
 
+    print("AFTER PARSINGGGGG")
 
-    config = OmegaConf.load("configs/latent-diffusion/cin256-v2.yaml")  # TODO: Optionally download from same location as ckpt and chnage this logic
-    model = load_model_from_config(config, "models/ldm/cin256-v2/model.ckpt")
-
+    config = OmegaConf.load("configs/latent-diffusion-frequency/cin256_added.yaml")  # TODO: Optionally download from same location as ckpt and chnage this logic
+    model = load_model_from_config(config, "logs/2024-12-09T06-52-45_cin256_added/checkpoints/epoch=000019.ckpt")
+    
+    print("after load modelLLLL")
+    
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
     model = model.to(device)
 
@@ -116,17 +119,27 @@ if __name__ == "__main__":
     #classes = [25, 187, 448, 992]   # define classes to be sampled here
     #classes = [50, 900, 200, 400]
     #classes = [100, 300, 500, 800]
-    classes = [446, 127, 56, 12]
+    classes = [0, 217, 497, 574]  
+    #imagenette total classes:
+    #0 (man holding fish), 217  (dog) , 482 (n02979186) (cassete player/radio,etc) , 
+    #491: n03000684 (chainsaw in setting/solo)  497: n03028079 (churches/cathedral/monuments)
+    # 566: n03394916 (trumpet/horn/band/instruments)  569: n03417042 (garbage truck), 571: n03425413 (gas station)
+    # 574: n03445777 (golfball/golfing) , 701: n03888257(parachute flying)
+
+
+
     with torch.no_grad():
         with model.ema_scope():
+            print("before get learned conditiong")
             
-            uc = model.get_learned_conditioning(
-                {model.cond_stage_key: torch.tensor(opt.n_samples*[1000]).to(model.device)}
-                )
+            #uc = model.get_learned_conditioning(
+            #    {model.cond_stage_key: torch.tensor(opt.n_samples*[1000]).to(model.device)}
+            #    )
             
             for class_label in classes:
                 print(f"rendering {opt.n_samples} examples of class '{class_label}' in {opt.ddim_steps} steps and using s={opt.scale:.2f}.")
                 xc = torch.tensor(opt.n_samples*[class_label])
+                print("before get learned conditioning")
                 c = model.get_learned_conditioning({model.cond_stage_key: xc.to(model.device)})
                 print("gpu", c.device)
                 samples_ddim, _ = sampler.sample(S=opt.ddim_steps,
@@ -134,8 +147,8 @@ if __name__ == "__main__":
                                                 batch_size=opt.n_samples,
                                                 shape=[3, opt.H//4, opt.W//4],
                                                 verbose=False,
-                                                unconditional_guidance_scale=opt.scale,
-                                                unconditional_conditioning=uc, 
+                                                #unconditional_guidance_scale=opt.scale,
+                                                #unconditional_conditioning=uc, 
                                                 eta=opt.ddim_eta)
 
                 x_samples_ddim = model.decode_first_stage(samples_ddim)

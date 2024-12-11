@@ -79,12 +79,15 @@ class LatentDiffusionFrequency(DDPM):
         else:
             self.register_buffer('scale_factor', torch.tensor(scale_factor))
         self.instantiate_first_stage(first_stage_config) ## image encoder
+        Print("passed 1st stage")
         self.instantiate_cond_stage(cond_stage_config)   ## 
+        #Print("passed cond 2nd stage")
         self.cond_stage_forward = cond_stage_forward
+        #Print("passed cond stage forward stage")
         self.clip_denoised = False
         self.bbox_tokenizer = None  
 
-        self.restarted_from_ckpt = False
+        self.restarted_from_ckpt = False   #RESTART FROM CHECKPOINT!!
         if ckpt_path is not None:
             self.init_from_ckpt(ckpt_path, ignore_keys)
             self.restarted_from_ckpt = True
@@ -121,19 +124,22 @@ class LatentDiffusionFrequency(DDPM):
             self.make_cond_schedule()
 
     def instantiate_first_stage(self, config):
+        #print("entering first stage")
         model = instantiate_from_config(config)
         self.first_stage_model = model.eval()
         self.first_stage_model.train = disabled_train
         for param in self.first_stage_model.parameters():
             param.requires_grad = False
+        
 
     def instantiate_cond_stage(self, config):
+        print()
         if not self.cond_stage_trainable:
             if config == "__is_first_stage__":
-                print("Using first stage also as cond stage.")
+                #print("Using first stage also as cond stage.")
                 self.cond_stage_model = self.first_stage_model
             elif config == "__is_unconditional__":
-                print(f"Training {self.__class__.__name__} as an unconditional model.")
+                #print(f"Training {self.__class__.__name__} as an unconditional model.")
                 self.cond_stage_model = None
                 # self.be_unconditional = True
             else:
@@ -172,6 +178,7 @@ class LatentDiffusionFrequency(DDPM):
         return self.dft(z)
 
     def get_learned_conditioning(self, c):
+        print("enter get learned conditioning")
         if self.cond_stage_forward is None:
             if hasattr(self.cond_stage_model, 'encode') and callable(self.cond_stage_model.encode):
                 c = self.cond_stage_model.encode(c)
@@ -275,18 +282,35 @@ class LatentDiffusionFrequency(DDPM):
 
     @torch.no_grad()
     def dft(self, x):
-        rfft_result = torch.fft.rfft(x)  # Shape: (batch_size, signal_length // 2 + 1)
+        
+        rfft_result = torch.fft.rfft(x, dim=1)  # Shape: (batch_size, signal_length // 2 + 1)
+        
+        #print("rfft result")
+        #print(rfft_result.shape)
 
         # Extract the real and imaginary parts
         real_part = rfft_result.real  # Shape: (batch_size, signal_length // 2 + 1)
         imag_part = rfft_result.imag  # Shape: (batch_size, signal_length // 2 + 1)
+        
+        #print("real part")
+        #print(real_part.shape)
 
+        #print("imag part")
+        #print(imag_part.shape)
+        
         # Remove the imaginary parts corresponding to real-only components
         # First component and possibly the last (when signal_length is even)
-        imag_part_trimmed = imag_part[..., 1:-1] if x.shape[1] % 2 == 0 else imag_part[..., 1:]
+        imag_part_trimmed = imag_part[:, 1:-1, ...] if x.shape[1] % 2 == 0 else imag_part[:, 1:, ...]
+        
+        #print("imag part trimmed")
+        #print(imag_part_trimmed.shape)
 
         # Concatenate the real parts and the trimmed imaginary parts
-        z = torch.cat((real_part, imag_part_trimmed), dim=-1)
+        z = torch.cat((real_part, imag_part_trimmed), dim=1)
+        
+        #print("z")
+        #print(z.shape)
+        
         return z
 
     @torch.no_grad()
@@ -347,25 +371,26 @@ class LatentDiffusionFrequency(DDPM):
 
     @torch.no_grad()
     def invert_dft(self, z):
-        length = z.shape[-1]
-        print(length)
+        
+        length = z.shape[1]
+        #print(length)
         # Split the real and imaginary parts
-        real_part = z[..., :length // 2 + 1]  # Extract real part
-        print(real_part.shape)
-        imag_part = z[..., length // 2 + 1:]  # Extract trimmed imaginary part
-        print(imag_part.shape)
+        real_part = z[:, :length // 2 + 1, ...]  # Extract real part
+        #print(real_part.shape)
+        imag_part = z[:, length // 2 + 1:, ...]  # Extract trimmed imaginary part
+        #print(imag_part.shape)
 
-        full_imag_part = torch.cat([torch.zeros_like(imag_part[..., :1]), imag_part], dim=-1)
+        full_imag_part = torch.cat([torch.zeros_like(imag_part[:, :1, ...]), imag_part], dim=1)
         # Rebuild the full imaginary part by adding zeros where needed
         if length % 2 == 0:
             # For even-length signals, we add an extra zero at the end of the imaginary part
-            full_imag_part = torch.cat([full_imag_part, torch.zeros_like(imag_part[..., :1])], dim=-1)
+            full_imag_part = torch.cat([full_imag_part, torch.zeros_like(imag_part[:, :1, ...])], dim=1)
 
         # Reconstruct the complex tensor
         complex_tensor = torch.complex(real_part, full_imag_part)
 
         # Perform inverse rFFT to recover the original signal
-        z_recovered = torch.fft.irfft(complex_tensor, n=length)
+        z_recovered = torch.fft.irfft(complex_tensor, dim=1, n=length)
 
         return z_recovered
 

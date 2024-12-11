@@ -1,6 +1,7 @@
 **/__pycache__/
 
 /models/
-/data/
+/data
 outputs
 logs
+/data/imagenette_train/imagenette2-320.tgz

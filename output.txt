@@ -1,0 +1,57 @@
+AFTER PARSINGGGGG
+Loading model from logs/2024-12-09T06-52-45_cin256_added/checkpoints/epoch=000019.ckpt
+LatentDiffusionFrequency: Running in eps-prediction mode
+DiffusionWrapper has 394.98 M params.
+Keeping EMAs of 628.
+making attention of type 'vanilla' with 512 in_channels
+making attention of type 'vanilla' with 512 in_channels
+making attention of type 'vanilla' with 512 in_channels
+Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+making attention of type 'vanilla' with 512 in_channels
+making attention of type 'vanilla' with 512 in_channels
+making attention of type 'vanilla' with 512 in_channels
+making attention of type 'vanilla' with 512 in_channels
+after load modelLLLL
+before get learned conditiong
+rendering 6 examples of class '0' in 20 steps and using s=3.00.
+before get learned conditioning
+gpu cuda:0
+Data shape for DDIM sampling is (6, 3, 64, 64), eta 0.0
+Running DDIM Sampling with 20 timesteps
+DDIM Sampler:   0%|          | 0/20 [00:00<?, ?it/s]DDIM Sampler:   0%|          | 0/20 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/oscar/scratch/aghandik/FourierImageDiffuse/scripts/class2img.py", line 145, in <module>
+    samples_ddim, _ = sampler.sample(S=opt.ddim_steps,
+  File "/users/aghandik/.local/lib/python3.9/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/oscar/scratch/aghandik/FourierImageDiffuse/scripts/ldm/models/diffusion/ddim.py", line 95, in sample
+    samples, intermediates = self.ddim_sampling(conditioning, size,
+  File "/users/aghandik/.local/lib/python3.9/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/oscar/scratch/aghandik/FourierImageDiffuse/scripts/ldm/models/diffusion/ddim.py", line 148, in ddim_sampling
+    outs = self.p_sample_ddim(img, cond, ts, index=index, use_original_steps=ddim_use_original_steps,
+  File "/users/aghandik/.local/lib/python3.9/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/oscar/scratch/aghandik/FourierImageDiffuse/scripts/ldm/models/diffusion/ddim.py", line 171, in p_sample_ddim
+    e_t = self.model.apply_model(x, t, c)
+  File "/oscar/scratch/aghandik/FourierImageDiffuse/scripts/ldm/models/diffusion/ddpm_frequency.py", line 676, in apply_model
+    x_recon = self.model(x_noisy, t, **cond)
+  File "/users/aghandik/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/oscar/scratch/aghandik/FourierImageDiffuse/scripts/ldm/models/diffusion/ddpm.py", line 1412, in forward
+    out = self.diffusion_model(x, t, context=cc)
+  File "/users/aghandik/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/oscar/scratch/aghandik/FourierImageDiffuse/scripts/ldm/modules/diffusionmodules/openaimodel.py", line 732, in forward
+    h = module(h, emb, context)
+  File "/users/aghandik/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/oscar/scratch/aghandik/FourierImageDiffuse/scripts/ldm/modules/diffusionmodules/openaimodel.py", line 87, in forward
+    x = layer(x)
+  File "/users/aghandik/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/users/aghandik/.local/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 443, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/users/aghandik/.local/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 439, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Given groups=1, weight of size [256, 4, 3, 3], expected input[6, 3, 64, 64] to have 4 channels, but got 3 channels instead

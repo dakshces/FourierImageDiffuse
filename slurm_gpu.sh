@@ -3,8 +3,7 @@
 # A batch script for running a job on Oscar's 3090 condo, using the Slurm scheduler
 # The 3090 condo runs NVIDIA's GeForce RTX 3090 graphics card
 
-#SBATCH -p gpu-he --gres=gpu:1
-#SBATCH --constraint=a6000|geforce3090|l40s
+#SBATCH -p gpu --gres=gpu:1
 #SBATCH --exclude=gpu1506,gpu2108,gpu2114,gpu2115,gpu2116
 #SBATCH -N 1 # gives one node, makes sure cpu cores are on same node
 #SBATCH -c 1 # num CPU cores
@@ -12,7 +11,7 @@
 #SBATCH -t 24:00:00
 #SBATCH -e output/slurm_logs/%j.err
 #SBATCH -o output/slurm_logs/%j.out
-#SBATCH --mail-user=daksh_aggarwal@brown.edu
+#SBATCH --mail-user=akshay_ghandikota@brown.edu
 #SBATCH --mail-type=ALL
 
 # SET UP COMPUTING ENV
@@ -27,11 +26,11 @@ module load ffmpeg
 
 # Activate virtual environment
 # Load anaconda module, and other modules
-source /gpfs/runtime/opt/anaconda/2020.02/etc/profile.d/conda.sh
-conda activate ldm
+#source /gpfs/runtime/opt/anaconda/2020.02/etc/profile.d/conda.sh
+#conda activate ldm
 
 # Move to correct working directory
-HOME_DIR=/users/daggarw5/scratch/latent-diffusion
+HOME_DIR=/users/aghandik/scratch/FourierImageDiffuse
 cd ${HOME_DIR}
 
 # linear head, running all datasets
@@ -48,4 +47,4 @@ cd ${HOME_DIR}
 # sh ./run_exps_fourier_reg.sh gaussian
 # sh ./run_exps_fourier_reg.sh gmm
 #sh ./run_exps_fourier_reg.sh gmm2
-CUDA_VISIBLE_DEVICES=0 python main.py --base configs/latent-diffusion/lsun_churches-ldm-kl-8.yaml -t --gpus 0, --scale_lr False
+CUDA_VISIBLE_DEVICES=0 python main.py --base configs/latent-diffusion-frequency/cin256_added.yaml -t --gpus 0, --scale_lr False

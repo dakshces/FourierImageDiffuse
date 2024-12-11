@@ -1,0 +1,16 @@
+Global seed set to 23
+Traceback (most recent call last):
+  File "main.py", line 535, in <module>
+    model = instantiate_from_config(config.model)
+  File "/oscar/scratch/aghandik/FourierImageDiffuse/ldm/util.py", line 85, in instantiate_from_config
+    return get_obj_from_str(config["target"])(**config.get("params", dict()))
+  File "/oscar/scratch/aghandik/FourierImageDiffuse/ldm/util.py", line 93, in get_obj_from_str
+    return getattr(importlib.import_module(module, package=None), cls)
+AttributeError: module 'ldm.models.diffusion.ddpm' has no attribute 'LatentDiffusionFrequency'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 744, in <module>
+    if trainer is not None:
+NameError: name 'trainer' is not defined
