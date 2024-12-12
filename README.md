@@ -2,6 +2,8 @@
 **FourierDiffuse: Image Diffusion in Frequency Space**
 Daksh Aggarwal, Jiaying Cheng, Akshay Ghandikota
 
+Code: https://github.com/dakshces/FourierImageDiffuse
+
 ## Requirements
 A suitable [conda](https://conda.io/) environment named `ldm` can be created
 and activated with:
