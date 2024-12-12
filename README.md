@@ -19,7 +19,7 @@ pip install git+https://github.com/arogozhnikov/einops.git
 
 If you'd like to train our model, the 5 datasets (LSUN-Bedrooms, Churches, Classrooms, Conference, FFHQ) need to be obtained and placed as described in the original [LDM repo](https://github.com/CompVis/latent-diffusion).
 
-Training:
+## Training
 
 You can choose between training the vanilla or frequency diffusion model through the model config (e.g. [here](https://github.com/dakshces/FourierImageDiffuse/blob/main/configs/latent-diffusion-frequency/lsun_churches-ldm-kl-8.yaml) and [here](https://github.com/dakshces/FourierImageDiffuse/blob/main/configs/latent-diffusion/lsun_churches-ldm-kl-8.yaml)). Start training for unconditional image generation via:
 
@@ -27,13 +27,15 @@ You can choose between training the vanilla or frequency diffusion model through
 CUDA_VISIBLE_DEVICES=<GPU_ID> python main.py --base configs/latent-diffusion/<config_spec>.yaml -t --gpus 0,
 ```
 
-Sampling:
+## Sampling
 
 You can sample from your saved model checkpoints using:
 
 ```
 CUDA_VISIBLE_DEVICES=0 python scripts/sample_diffusion.py -r <path_to_model_ckpt> -n <num_samples> --batch_size <bs>  -e <eta for sampling, 0.0=deterministic sampling> 
 ```
+
+## FID evaluation
 
 We carry out FID evaluation using [torch-fidelity](https://torch-fidelity.readthedocs.io/en/latest/).
 
