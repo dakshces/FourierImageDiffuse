@@ -37,6 +37,10 @@ CUDA_VISIBLE_DEVICES=0 python scripts/sample_diffusion.py -r <path_to_model_ckpt
 
 We carry out FID evaluation using [torch-fidelity](https://torch-fidelity.readthedocs.io/en/latest/).
 
+
+
+Our code builds upon the original [LDM repository](https://github.com/CompVis/latent-diffusion).
+
 ## BibTeX
 
 ```
@@ -48,18 +52,6 @@ We carry out FID evaluation using [torch-fidelity](https://torch-fidelity.readth
       archivePrefix={arXiv},
       primaryClass={cs.CV}
 }
-
-@misc{https://doi.org/10.48550/arxiv.2204.11824,
-  doi = {10.48550/ARXIV.2204.11824},
-  url = {https://arxiv.org/abs/2204.11824},
-  author = {Blattmann, Andreas and Rombach, Robin and Oktay, Kaan and Ommer, Björn},
-  keywords = {Computer Vision and Pattern Recognition (cs.CV), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  title = {Retrieval-Augmented Diffusion Models},
-  publisher = {arXiv},
-  year = {2022},  
-  copyright = {arXiv.org perpetual, non-exclusive license}
-}
-
 
 ```
 
